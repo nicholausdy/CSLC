@@ -129,7 +129,8 @@ async function verifyJWT(token){
         const publicKey = fs.readFileSync(__dirname + '/jwtRS256.key.pub')
         const decoded = await jwt.verify(token, publicKey, {algorithms : ['RS256']})
         res.Status = 'Success'
-        res.Decoded = decoded
+        res.Code = 200
+        res.Message = decoded
     }
     catch (e) {
         res.Status = 'Failed'
@@ -141,22 +142,27 @@ async function verifyJWT(token){
     }
 }
 //validate function in the authorization headers
-async function verifyRequest(req,res){
+async function verifyRequest(req){
     res = {}
-    const token = req.headers['x-access-token'] || req.headers['authorization'];
-    if (token.startsWith('Bearer ')){
-        //Remove Bearer from string
-        token = token.slice(7, token.length);
-    }
-
-    if (token){
-        const verifyResult = await verifyJWT(token)
-    }
-    else {
+    let token = req.headers['x-access-token'] || req.headers['authorization'];
+    if (typeof token === 'undefined'){
         res.Status = 'Failed'
         res.Code = 403
-        res.Message = 'Auth token not supplied'
+        res.Message = 'No auth header'
     }
+    else {    
+        if (token.startsWith('Bearer ')){
+            //Remove Bearer from string
+            token = token.slice(7, token.length);
+        }
+        if (token){
+            const verifyResult = await verifyJWT(token)
+            res.Status = verifyResult.Status
+            res.Code = verifyResult.Code
+            res.Message = verifyResult.Message
+        }
+    }
+    return res
 }
 
 module.exports = {
