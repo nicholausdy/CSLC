@@ -1,17 +1,9 @@
 #!/usr/bin/bash
-sudo apt-get update
-sudo apt-get install \
-	    apt-transport-https \
-	        ca-certificates \
-		    curl \
-		        gnupg-agent \
-			    software-properties-common
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo apt-key fingerprint 0EBFCD88
-sudo add-apt-repository \
-	   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-	      $(lsb_release -cs) \
-	         stable"
-sudo apt-get install docker-ce docker-ce-cli containerd.io
-sudo docker run hello-world
+sudo dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
+sudo dnf install https://download.docker.com/linux/centos/7/x86_64/stable/Packages/containerd.io-1.2.6-3.3.el7.x86_64.rpm
+sudo dnf install docker-ce
+sudo systemctl enable --now docker
+curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o docker-compose
+sudo mv docker-compose /usr/local/bin && sudo chmod +x /usr/local/bin/docker-compose
+sudo docker run --rm --name=linuxconfig-test -p 80:80 httpd
 
