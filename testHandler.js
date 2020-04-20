@@ -1,6 +1,7 @@
 const penggunaHandler = require('./handler/pengguna.js')
 const gedungHandler = require('./handler/gedung.js')
 const kelasHandler = require('./handler/kelas.js')
+const sensorHandler = require('./handler/sensor.js')
 
 async function main(){
     const user = 'william'
@@ -24,13 +25,22 @@ async function main(){
     //const res7 = await kelasHandler.validateGedung('Labtek VII',1)
     //console.log(res7)
     const idgedung = 'Labtek V'
-    const idkelas = '7604'
-    const lantai = 3
+    const idkelas = '7603'
+    const lantai = 1
     const jumlahlampu = 10
     const kapasitaskelas = 50
-    const res8 = await kelasHandler.addKelas(idkelas,idgedung,lantai,jumlahlampu,kapasitaskelas)
-    console.log(res8)
-
+    //const res8 = await kelasHandler.addKelas(idkelas,idgedung,lantai,jumlahlampu,kapasitaskelas)
+    //console.log(res8)
+    //const res9 = await kelasHandler.editKelas(idkelas,idgedung,lantai,jumlahlampu,kapasitaskelas)
+    //console.log(res9)
+    //for (i = 1; i < 2; i++){
+    //    let res10 = await sensorHandler.increasePeopleCount(idkelas)
+    //    console.log(res10)
+    // }
+    //const res11 = await kelasHandler.editLampuMenyala(idkelas)
+    //console.log(res11)
+    const res12 = await kelasHandler.getArrayLampu(idkelas)
+    console.log(res12)
 }
 
 main();

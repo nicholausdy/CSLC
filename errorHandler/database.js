@@ -3,6 +3,10 @@ async function databaseError(e) {
         message = 'Primary key already exists'
         return message
     }
+    else if (e.code == '23503'){
+        message = 'Kelas belum terdaftar'
+        return message
+    }
     else if (e.code == 'ECONNREFUSED'){
         message = 'Database connection error'
         return message
