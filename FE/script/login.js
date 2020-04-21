@@ -1,6 +1,6 @@
 const login = async () => {
  let usernameElem = document.getElementById('username');
-    let passwordElem = document.getElementById('password');
+ let passwordElem = document.getElementById('password');
  let response = await fetch(`http://52.76.55.94:3000/api/v1/login`, {
      method: 'POST', // *GET, POST, PUT, DELETE, etc.
      mode: 'cors', // no-cors, *cors, same-origin
@@ -11,12 +11,14 @@ const login = async () => {
      },
      body: JSON.stringify({
       "username": usernameElem.value, 
-        "password": passwordElem.value,
+       "password": passwordElem.value,
      })
      })
  const resp = await response.json();
  console.log(usernameElem.value);
  console.log(passwordElem.value);
+ window.localStorage.setItem('username',usernameElem.value);
+ window.localStorage.setItem('password',passwordElem.value);
  console.log(resp);
  console.log(resp.Token);
  if (resp.Status == 'Success'){
