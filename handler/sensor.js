@@ -37,13 +37,20 @@ async function decreasePeopleCount(idkelas){
     let result = {};
     if (showResult.Status == 'Success'){
         let peoplecount = showResult.Message.peoplecount
-        peoplecount-=1
-        result = await sensor.updatePeopleCount(idkelas,peoplecount)
-        if (result.Status == 'Success') {
-            result.Code = 200
+        if (peoplecount > 0){
+            peoplecount-=1
+            result = await sensor.updatePeopleCount(idkelas,peoplecount)
+            if (result.Status == 'Success') {
+                result.Code = 200
+            }
+            else {
+                result.Code = 500
+            }
         }
-        else {
+        else { //peoplecount <= 0
+            result.Status = 'Failed'
             result.Code = 500
+            result.Message = 'Counter is already 0'
         }
     }
     else {
