@@ -7,7 +7,7 @@
 
   <title>Tambah kelas</title>
 
-  <script src="script/mahasiswa.js"></script>
+  <script src="script/tambahkelas.js"></script>
 
   <link href='https://fonts.googleapis.com/css?family=Lato:400,300,400italic,700,900' rel='stylesheet' type='text/css'>
 
@@ -176,33 +176,23 @@
 			</tr>
 			<tr>
 				<th>Kapasitas Kelas</th>		
-				<th><input name="kapasitas" type="text" id="kapasitas"></th></tr>
+				<th><input name="kapasitasKelas" type="text" id="kapasitasKelas"></th></tr>
 			<tr>
 				<th>Jumlah Lampu</th>		
 				<th><input name="jumlahLampu" type="text" id="jumlahLampu"></th>
 			</tr>
 			<tr>
-				<th>Gedung</th>		
-				<th>
-					<select id="cars">
-				  		<option value="Labtek 5">Labtek 5</option>
-				  		<option value="Labtek 6">Labtek 6</option>
-				  		<option value="Labtek 7">Labtek 7</option>
-				  		<option value="Labtek 8">Labtek 8</option>
-					</select>
-				</th>
+				<th>Gedung</th>
+        <th><input name="gedung" type="text" id="gedung"></th>		
 			</tr>
 			<tr>
-				<th>Lantai</th>		
-				<th>
-					<select id="cars">
-					  	<option value="1">1</option>
-					  	<option value="2">2</option>
-					  	<option value="3">3</option>
-					  	<option value="4">4</option>
-					</select>
-				</th>
+				<th>Lantai</th>	
+        <th><input name="lantai" type="text" id="lantai"></th>	
 			</tr>
+    <tr>
+        <th>Lampu Menyala</th> 
+        <th><input name="lampuMenyala" type="text" id="lampuMenyala"></th>  
+      </tr>
 			<tr>
 				<th>Jadwal Kelas</th>		
 			</th>
@@ -219,7 +209,7 @@
 				<th><input name="jam" type="number" id="jam"></th>
 			</tr>
 		</table><br>
-		<button>tambahkan</buton>
+		<a class="btn btn-success btn-lg" onclick="postKelas()" href="#">Tambahkan</a>
           </div>
           <div class="col-sm-6">
           <h2 style="font-weight:bold">Jadwal Kelas</h2>
@@ -247,9 +237,6 @@
 
   <!-- Bootstrap 3 has typeahead optionally -->
   <script src="assets/js/typeahead.min.js"></script>
-  <script>
-    window.onload = loadData();
-  </script>
 
 </body>
 
