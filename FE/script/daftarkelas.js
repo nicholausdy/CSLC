@@ -21,14 +21,14 @@ const createRow = (i,idKelas,kapasitasKelas,jumlahLampu,gedung,lantai,detail,edi
 	detailCell.innerHTML = `<span class="label label-success pull-left" >lihat detail</span>`
 
 	let editCell = document.createElement('td');
-	editCell.innerHTML = `<span class="label label-info pull-left">edit</span>`
+	editCell.innerHTML = `<span class="label label-info pull-left" onclick="getUpdate(${idKelas})">edit</span>`
 
 	let hapusCell = document.createElement('td');
 	hapusCell.innerHTML = `<span class="label label-danger pull-left">hapus</span>`
 
 	detailCell.addEventListener('click', () => seeDetails(idKelas));
 	hapusCell.addEventListener('click', () => hapus(idKelas));
-	editCell.addEventListener('click', () => updateKelas(idKelas));
+	editCell.addEventListener('click', () => getUpdate(idKelas));
 
 	
 	let row = document.createElement('tr');
@@ -67,36 +67,18 @@ const loadData = async () => {
 	}
 };
 
-const updateKelas = async () => {
-  let idKelasElem = document.getElementById('idKelas');
-  let kapasitasKelasElem = document.getElementById('kapasitasKelas');
-  let jumlahLampuElem = document.getElementById('jumlahLampu');
-  let gedungElem = document.getElementById('gedung');
-  let lantaiElem = document.getElementById('lantai');
-
-  let id = window.localStorage.getItem('idKelas');
-  await fetch(`http://178.128.104.74/herregistrasimahasiswalama/tagihan/${id}`, {
-    method: 'PUT',
-    headers: {
-      'Content-Type': 'application/json',
-      'authorization': window.localStorage.getItem('token'),
-    },
-    body: JSON.stringify({
-	  "idkelas": idKelasElem.value,
-      "kapasitaskelas": parseInt(kapasitasKelasElem.value), 
-      "jumlahlampu": parseInt(jumlahLampuElem.value), 
-      "idgedung": parseInt(gedungElem.value), 
-      "lantai": parseInt(lantaiElem.value),
-    })
-  })
-  let urlPart = window.location.href.split('/');
-      window.location = urlPart.splice(0, urlPart.length-1).join('/') + '/daftarKelas.html';
-};
-
 const seeDetails = async (idKelas) => {
   window.localStorage.setItem('idClass', idKelas);
   let tes = localStorage.getItem('idClass');
   console.log(tes);
   let urlPart1 = window.location.href.split('/');
   window.location = urlPart1.splice(0, urlPart1.length-1).join('/') + '/detailkelas.html';
+}
+
+const getUpdate = async (idKelas) => {
+  window.localStorage.setItem('idClass', idKelas);
+  let tes = localStorage.getItem('idClass');
+  console.log(tes);
+  let urlPart1 = window.location.href.split('/');
+  window.location = urlPart1.splice(0, urlPart1.length-1).join('/') + '/updatekelas.html';
 }
