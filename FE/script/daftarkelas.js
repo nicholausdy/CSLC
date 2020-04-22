@@ -24,10 +24,9 @@ const createRow = (i,idKelas,kapasitasKelas,jumlahLampu,gedung,lantai,detail,edi
 	editCell.innerHTML = `<span class="label label-info pull-left" onclick="getUpdate(${idKelas})">edit</span>`
 
 	let hapusCell = document.createElement('td');
-	hapusCell.innerHTML = `<span class="label label-danger pull-left">hapus</span>`
+	hapusCell.innerHTML = `<span class="label label-danger pull-left" onclick="hapus(${idKelas})">hapus</span>`
 
 	detailCell.addEventListener('click', () => seeDetails(idKelas));
-	hapusCell.addEventListener('click', () => hapus(idKelas));
 	editCell.addEventListener('click', () => getUpdate(idKelas));
 
 	
