@@ -1,0 +1,3748 @@
+{
+	"info": {
+		"_postman_id": "6262f924-8211-46ba-85d5-90a382de6235",
+		"name": "RSTI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sarpras (Token)",
+			"item": [
+				{
+					"name": "http://52.76.55.94:3000/api/v1/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"dicky\",\n\t\"password\": \"dicky\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/login",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						},
+						"description": "Login"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"dicky\",\n\t\"password\": \"dicky\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/login",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "856"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"358-4yHGYFvUtktnHF6kgrN2AA+n/mA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 05:02:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": \"User authentication successful\",\n    \"Code\": 200,\n    \"Token\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRpY2t5IiwiaWF0IjoxNTg3NDQ1Mzc5fQ.p_xA3CtobPZ2XhTRe9wl7kL9YpYvEIqleLcNDNHGiYiRsFk7Ojowr-oSm6epBulNC0OPJmuAzlzCv-HOENTb4Mszb0i7HYVPaVb3sRCuCzkZ0Z1oVQnmEx_rFqM4tQ_f4e520LIpTAngFVdiWvZJ9h0w7mMT3RR6LokdbMqXvYqZoyPIKYLERGdY-I_XKdGmOKBAsFe-1T8c_iSzM7gkUcO92L5FX_wvdnRj-CnhJaPxE3Bc5TPeToxWZ7Nwi2JWFI3PpTgAFsOk87NIjtZvr-AxF2yQV-DNXlITChS9nK53Eu03SH0OWl-b2uy9TIA6zvMZTIVUIGIxA9QI3lBBMRnsCADeM44nknEfQvQtsNKbZKIrg5jarS1W6HlUdvgSnRdA9Tdq5WK21FueIys60dJiQ3hwpMi1OJmna9V-P_Vph1ls4AiO5ohTkD3WV2eGDU-ikIuyxv_75vfUXI5Ck2GIQE_lRW9uWEK3zHRQcY4ArbpOA8aACKY_hDZAY38Ui9aJvX0kpnWCDDNwL939mtmX-jCca0_tsKoo6X5dULC6c6fE8vCcsHCvhzmjEzrugyazbnxi2xfMqmCeDww_zXerqWBUXZu-gwuJAbFjIUt5n1wf1s28rVxbVQFzb0qQ2igHM5PMMzIkRSwj2eY1lnEKcmoWDWM0Ywf-8160sdk\"\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/gedung/add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRpY2t5IiwiaWF0IjoxNTg3NDQ0ODAxfQ.hUw4RmGAwTk32ohkHjBLB19vq1bm0NuF_6QZbF68oTjTL9JAXdX1hAJK-480CeMJP2cM3HOmggOFEsGHTM-TrnHlBsK-RhAvO3bzgtC6eRC2yujKhXAh4GCgQRGaw0td_8hZIlQErwkvV5YS0tJWmPJiKxkDwGkTOLUC8ySGnJPQmQ9wdPe6k5fjY6A61jETeWoelJI3_yR7OS_LO_RpH491VHZXW6zZVhAeljchJM_ed6sYw0GC6ORc2IDh1jmMYAfzamBeh7LETQHkrK9eW95ZET978AJ5HmvjIPDZOfZOhetJ53j0YdSQ8fEXSwrH6vhnDsBozkE2O5jNHvYtXNqge17yj6RvPkoZUsO0sUkOIFfCs0Eszf162rjZKQxG7FaYmrPOQReWvhRk9fC6DjzY2S7taKHOsoj6A-rlHPdPFPa5CA0kpPyzinhUrE3R1XGyj0kRyJeeMYu9tj9IWCabeZaSlKFWpXNirpj6ccXEBy56u-3iLUQdrBf-KSdowBdgfwSXonZOaC8uigRLQoZE45o4rTQg31RW9VMfSDIewm0fHiR-ESb9PQF4Pn9mYweFe--CklKUa98FtDjN3YBm81neDEM9yrPKTqku8K8_fUKJeSi9tUcTvqe0cvHslBtvp3OfHozUzRCEeXY6UNLrqH1sV97ucOklD0bj1Fk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idgedung\": \"GKUB\",\n\t\"jumlah lantai\": \"4\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/gedung/add",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"gedung",
+								"add"
+							]
+						},
+						"description": "Add Gedung"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/gedung/add",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"idgedung\": \"GKUB\",\n\t\"jumlah lantai\": \"4\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/gedung/add",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"gedung",
+										"add"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"44-vBw36M8eJvsymk/v4Zzbw1IbRtw\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 05:10:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": \"Record insert successful\",\n    \"Code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/gedung/list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRpY2t5IiwiaWF0IjoxNTg3NDQ0ODAxfQ.hUw4RmGAwTk32ohkHjBLB19vq1bm0NuF_6QZbF68oTjTL9JAXdX1hAJK-480CeMJP2cM3HOmggOFEsGHTM-TrnHlBsK-RhAvO3bzgtC6eRC2yujKhXAh4GCgQRGaw0td_8hZIlQErwkvV5YS0tJWmPJiKxkDwGkTOLUC8ySGnJPQmQ9wdPe6k5fjY6A61jETeWoelJI3_yR7OS_LO_RpH491VHZXW6zZVhAeljchJM_ed6sYw0GC6ORc2IDh1jmMYAfzamBeh7LETQHkrK9eW95ZET978AJ5HmvjIPDZOfZOhetJ53j0YdSQ8fEXSwrH6vhnDsBozkE2O5jNHvYtXNqge17yj6RvPkoZUsO0sUkOIFfCs0Eszf162rjZKQxG7FaYmrPOQReWvhRk9fC6DjzY2S7taKHOsoj6A-rlHPdPFPa5CA0kpPyzinhUrE3R1XGyj0kRyJeeMYu9tj9IWCabeZaSlKFWpXNirpj6ccXEBy56u-3iLUQdrBf-KSdowBdgfwSXonZOaC8uigRLQoZE45o4rTQg31RW9VMfSDIewm0fHiR-ESb9PQF4Pn9mYweFe--CklKUa98FtDjN3YBm81neDEM9yrPKTqku8K8_fUKJeSi9tUcTvqe0cvHslBtvp3OfHozUzRCEeXY6UNLrqH1sV97ucOklD0bj1Fk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/gedung/list",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"gedung",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/gedung/list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/gedung/list",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"gedung",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "464"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d0-yI8K6Bxql+o4NNyFeAAKIQfxvKY\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 05:03:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": [\n        {\n            \"idgedung\": \"Labtek VI\",\n            \"jumlahlantai\": 4\n        },\n        {\n            \"idgedung\": \"Labtek VII\",\n            \"jumlahlantai\": 4\n        },\n        {\n            \"idgedung\": \"Labtek X\",\n            \"jumlahlantai\": 4\n        },\n        {\n            \"idgedung\": \"CC Timur\",\n            \"jumlahlantai\": 2\n        },\n        {\n            \"idgedung\": \"CC Barat\",\n            \"jumlahlantai\": 2\n        },\n        {\n            \"idgedung\": \"Labtek IX\",\n            \"jumlahlantai\": 4\n        },\n        {\n            \"idgedung\": \"Labtek V\",\n            \"jumlahlantai\": 4\n        },\n        {\n            \"idgedung\": \"Labtek VIII\",\n            \"jumlahlantai\": 4\n        },\n        {\n            \"idgedung\": \"Aula Barat\",\n            \"jumlahlantai\": 1\n        },\n        {\n            \"idgedung\": \"Labtek III\",\n            \"jumlahlantai\": 3\n        }\n    ],\n    \"Code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/gedung/list?idgedung=Labtek+V",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRpY2t5IiwiaWF0IjoxNTg3NDQ0ODAxfQ.hUw4RmGAwTk32ohkHjBLB19vq1bm0NuF_6QZbF68oTjTL9JAXdX1hAJK-480CeMJP2cM3HOmggOFEsGHTM-TrnHlBsK-RhAvO3bzgtC6eRC2yujKhXAh4GCgQRGaw0td_8hZIlQErwkvV5YS0tJWmPJiKxkDwGkTOLUC8ySGnJPQmQ9wdPe6k5fjY6A61jETeWoelJI3_yR7OS_LO_RpH491VHZXW6zZVhAeljchJM_ed6sYw0GC6ORc2IDh1jmMYAfzamBeh7LETQHkrK9eW95ZET978AJ5HmvjIPDZOfZOhetJ53j0YdSQ8fEXSwrH6vhnDsBozkE2O5jNHvYtXNqge17yj6RvPkoZUsO0sUkOIFfCs0Eszf162rjZKQxG7FaYmrPOQReWvhRk9fC6DjzY2S7taKHOsoj6A-rlHPdPFPa5CA0kpPyzinhUrE3R1XGyj0kRyJeeMYu9tj9IWCabeZaSlKFWpXNirpj6ccXEBy56u-3iLUQdrBf-KSdowBdgfwSXonZOaC8uigRLQoZE45o4rTQg31RW9VMfSDIewm0fHiR-ESb9PQF4Pn9mYweFe--CklKUa98FtDjN3YBm81neDEM9yrPKTqku8K8_fUKJeSi9tUcTvqe0cvHslBtvp3OfHozUzRCEeXY6UNLrqH1sV97ucOklD0bj1Fk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/gedung/list?idgedung=Labtek+V",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"gedung",
+								"list"
+							],
+							"query": [
+								{
+									"key": "idgedung",
+									"value": "Labtek+V"
+								}
+							]
+						},
+						"description": "Get List Gedung"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/gedung/list?idgedung=Labtek+V",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/gedung/list?idgedung=Labtek+V",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"gedung",
+										"list"
+									],
+									"query": [
+										{
+											"key": "idgedung",
+											"value": "Labtek+V"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "82"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"52-df5BgNnVlLPvMmW+UG4eZ1XQyUw\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 05:13:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": {\n        \"idgedung\": \"Labtek V\",\n        \"jumlahlantai\": 4\n    },\n    \"Code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/kelas/add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRpY2t5IiwiaWF0IjoxNTg3NDQ0ODAxfQ.hUw4RmGAwTk32ohkHjBLB19vq1bm0NuF_6QZbF68oTjTL9JAXdX1hAJK-480CeMJP2cM3HOmggOFEsGHTM-TrnHlBsK-RhAvO3bzgtC6eRC2yujKhXAh4GCgQRGaw0td_8hZIlQErwkvV5YS0tJWmPJiKxkDwGkTOLUC8ySGnJPQmQ9wdPe6k5fjY6A61jETeWoelJI3_yR7OS_LO_RpH491VHZXW6zZVhAeljchJM_ed6sYw0GC6ORc2IDh1jmMYAfzamBeh7LETQHkrK9eW95ZET978AJ5HmvjIPDZOfZOhetJ53j0YdSQ8fEXSwrH6vhnDsBozkE2O5jNHvYtXNqge17yj6RvPkoZUsO0sUkOIFfCs0Eszf162rjZKQxG7FaYmrPOQReWvhRk9fC6DjzY2S7taKHOsoj6A-rlHPdPFPa5CA0kpPyzinhUrE3R1XGyj0kRyJeeMYu9tj9IWCabeZaSlKFWpXNirpj6ccXEBy56u-3iLUQdrBf-KSdowBdgfwSXonZOaC8uigRLQoZE45o4rTQg31RW9VMfSDIewm0fHiR-ESb9PQF4Pn9mYweFe--CklKUa98FtDjN3YBm81neDEM9yrPKTqku8K8_fUKJeSi9tUcTvqe0cvHslBtvp3OfHozUzRCEeXY6UNLrqH1sV97ucOklD0bj1Fk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idkelas\": \"7605\",\r\n    \"idgedung\": \"Labtek V\",\r\n    \"lantai\": 3,\r\n    \"jumlahlampu\": 20,\r\n    \"kapasitaskelas\": 40,\r\n    \"lampumenyala\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/kelas/add",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"kelas",
+								"add"
+							]
+						},
+						"description": "Add kelas"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/kelas/add",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idkelas\": \"7605\",\r\n    \"idgedung\": \"Labtek V\",\r\n    \"lantai\": 3,\r\n    \"jumlahlampu\": 20,\r\n    \"kapasitaskelas\": 40,\r\n    \"lampumenyala\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/kelas/add",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"kelas",
+										"add"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"44-vBw36M8eJvsymk/v4Zzbw1IbRtw\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 05:21:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": \"Record insert successful\",\n    \"Code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/kelas/edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRpY2t5IiwiaWF0IjoxNTg3NDQ0ODAxfQ.hUw4RmGAwTk32ohkHjBLB19vq1bm0NuF_6QZbF68oTjTL9JAXdX1hAJK-480CeMJP2cM3HOmggOFEsGHTM-TrnHlBsK-RhAvO3bzgtC6eRC2yujKhXAh4GCgQRGaw0td_8hZIlQErwkvV5YS0tJWmPJiKxkDwGkTOLUC8ySGnJPQmQ9wdPe6k5fjY6A61jETeWoelJI3_yR7OS_LO_RpH491VHZXW6zZVhAeljchJM_ed6sYw0GC6ORc2IDh1jmMYAfzamBeh7LETQHkrK9eW95ZET978AJ5HmvjIPDZOfZOhetJ53j0YdSQ8fEXSwrH6vhnDsBozkE2O5jNHvYtXNqge17yj6RvPkoZUsO0sUkOIFfCs0Eszf162rjZKQxG7FaYmrPOQReWvhRk9fC6DjzY2S7taKHOsoj6A-rlHPdPFPa5CA0kpPyzinhUrE3R1XGyj0kRyJeeMYu9tj9IWCabeZaSlKFWpXNirpj6ccXEBy56u-3iLUQdrBf-KSdowBdgfwSXonZOaC8uigRLQoZE45o4rTQg31RW9VMfSDIewm0fHiR-ESb9PQF4Pn9mYweFe--CklKUa98FtDjN3YBm81neDEM9yrPKTqku8K8_fUKJeSi9tUcTvqe0cvHslBtvp3OfHozUzRCEeXY6UNLrqH1sV97ucOklD0bj1Fk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idkelas\": \"7605\",\r\n    \"idgedung\": \"Labtek V\",\r\n    \"lantai\": 3,\r\n    \"jumlahlampu\": 20,\r\n    \"kapasitaskelas\": 100,\r\n    \"lampumenyala\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/kelas/edit",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"kelas",
+								"edit"
+							]
+						},
+						"description": "Update kelas"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/kelas/edit",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idkelas\": \"7605\",\r\n    \"idgedung\": \"Labtek V\",\r\n    \"lantai\": 3,\r\n    \"jumlahlampu\": 20,\r\n    \"kapasitaskelas\": 100,\r\n    \"lampumenyala\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/kelas/edit",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"kelas",
+										"edit"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"44-jRG4AZZQQSYgTGkAl6UD9cgWWHY\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 05:23:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": \"Record update successful\",\n    \"Code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/kelas/list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRpY2t5IiwiaWF0IjoxNTg3NDQ0ODAxfQ.hUw4RmGAwTk32ohkHjBLB19vq1bm0NuF_6QZbF68oTjTL9JAXdX1hAJK-480CeMJP2cM3HOmggOFEsGHTM-TrnHlBsK-RhAvO3bzgtC6eRC2yujKhXAh4GCgQRGaw0td_8hZIlQErwkvV5YS0tJWmPJiKxkDwGkTOLUC8ySGnJPQmQ9wdPe6k5fjY6A61jETeWoelJI3_yR7OS_LO_RpH491VHZXW6zZVhAeljchJM_ed6sYw0GC6ORc2IDh1jmMYAfzamBeh7LETQHkrK9eW95ZET978AJ5HmvjIPDZOfZOhetJ53j0YdSQ8fEXSwrH6vhnDsBozkE2O5jNHvYtXNqge17yj6RvPkoZUsO0sUkOIFfCs0Eszf162rjZKQxG7FaYmrPOQReWvhRk9fC6DjzY2S7taKHOsoj6A-rlHPdPFPa5CA0kpPyzinhUrE3R1XGyj0kRyJeeMYu9tj9IWCabeZaSlKFWpXNirpj6ccXEBy56u-3iLUQdrBf-KSdowBdgfwSXonZOaC8uigRLQoZE45o4rTQg31RW9VMfSDIewm0fHiR-ESb9PQF4Pn9mYweFe--CklKUa98FtDjN3YBm81neDEM9yrPKTqku8K8_fUKJeSi9tUcTvqe0cvHslBtvp3OfHozUzRCEeXY6UNLrqH1sV97ucOklD0bj1Fk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/kelas/list",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"kelas",
+								"list"
+							]
+						},
+						"description": "Add Kelas"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/kelas/list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/kelas/list",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"kelas",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "467"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d3-xPyWdibIrxsUePJA2Zw7zfQGfO0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 05:46:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": [\n        {\n            \"idkelas\": \"7604\",\n            \"idgedung\": \"Labtek V\",\n            \"lantai\": 3,\n            \"jumlahlampu\": 10,\n            \"kapasitaskelas\": 30,\n            \"lampumenyala\": 0\n        },\n        {\n            \"idkelas\": \"7602\",\n            \"idgedung\": \"Labtek V\",\n            \"lantai\": 3,\n            \"jumlahlampu\": 10,\n            \"kapasitaskelas\": 40,\n            \"lampumenyala\": 3\n        },\n        {\n            \"idkelas\": \"7603\",\n            \"idgedung\": \"Labtek V\",\n            \"lantai\": 3,\n            \"jumlahlampu\": 5,\n            \"kapasitaskelas\": 50,\n            \"lampumenyala\": 1\n        },\n        {\n            \"idkelas\": \"7605\",\n            \"idgedung\": \"Labtek V\",\n            \"lantai\": 3,\n            \"jumlahlampu\": 20,\n            \"kapasitaskelas\": 100,\n            \"lampumenyala\": 1\n        }\n    ],\n    \"Code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/kelas/list?idkelas=7605",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRpY2t5IiwiaWF0IjoxNTg3NDQ0ODAxfQ.hUw4RmGAwTk32ohkHjBLB19vq1bm0NuF_6QZbF68oTjTL9JAXdX1hAJK-480CeMJP2cM3HOmggOFEsGHTM-TrnHlBsK-RhAvO3bzgtC6eRC2yujKhXAh4GCgQRGaw0td_8hZIlQErwkvV5YS0tJWmPJiKxkDwGkTOLUC8ySGnJPQmQ9wdPe6k5fjY6A61jETeWoelJI3_yR7OS_LO_RpH491VHZXW6zZVhAeljchJM_ed6sYw0GC6ORc2IDh1jmMYAfzamBeh7LETQHkrK9eW95ZET978AJ5HmvjIPDZOfZOhetJ53j0YdSQ8fEXSwrH6vhnDsBozkE2O5jNHvYtXNqge17yj6RvPkoZUsO0sUkOIFfCs0Eszf162rjZKQxG7FaYmrPOQReWvhRk9fC6DjzY2S7taKHOsoj6A-rlHPdPFPa5CA0kpPyzinhUrE3R1XGyj0kRyJeeMYu9tj9IWCabeZaSlKFWpXNirpj6ccXEBy56u-3iLUQdrBf-KSdowBdgfwSXonZOaC8uigRLQoZE45o4rTQg31RW9VMfSDIewm0fHiR-ESb9PQF4Pn9mYweFe--CklKUa98FtDjN3YBm81neDEM9yrPKTqku8K8_fUKJeSi9tUcTvqe0cvHslBtvp3OfHozUzRCEeXY6UNLrqH1sV97ucOklD0bj1Fk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/kelas/list?idkelas=7605",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"kelas",
+								"list"
+							],
+							"query": [
+								{
+									"key": "idkelas",
+									"value": "7605"
+								}
+							]
+						},
+						"description": "Get kelas 7605"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/kelas/list?idkelas=7605",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/kelas/list?idkelas=7605",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"kelas",
+										"list"
+									],
+									"query": [
+										{
+											"key": "idkelas",
+											"value": "7605"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "148"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"94-uzTBJVOH4csheXlgEy+cR3DxO4I\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 05:25:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": {\n        \"idkelas\": \"7605\",\n        \"idgedung\": \"Labtek V\",\n        \"lantai\": 3,\n        \"jumlahlampu\": 20,\n        \"kapasitaskelas\": 100,\n        \"lampumenyala\": 0\n    },\n    \"Code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/kelas/remove?idkelas=7601",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRpY2t5IiwiaWF0IjoxNTg3NDQ0ODAxfQ.hUw4RmGAwTk32ohkHjBLB19vq1bm0NuF_6QZbF68oTjTL9JAXdX1hAJK-480CeMJP2cM3HOmggOFEsGHTM-TrnHlBsK-RhAvO3bzgtC6eRC2yujKhXAh4GCgQRGaw0td_8hZIlQErwkvV5YS0tJWmPJiKxkDwGkTOLUC8ySGnJPQmQ9wdPe6k5fjY6A61jETeWoelJI3_yR7OS_LO_RpH491VHZXW6zZVhAeljchJM_ed6sYw0GC6ORc2IDh1jmMYAfzamBeh7LETQHkrK9eW95ZET978AJ5HmvjIPDZOfZOhetJ53j0YdSQ8fEXSwrH6vhnDsBozkE2O5jNHvYtXNqge17yj6RvPkoZUsO0sUkOIFfCs0Eszf162rjZKQxG7FaYmrPOQReWvhRk9fC6DjzY2S7taKHOsoj6A-rlHPdPFPa5CA0kpPyzinhUrE3R1XGyj0kRyJeeMYu9tj9IWCabeZaSlKFWpXNirpj6ccXEBy56u-3iLUQdrBf-KSdowBdgfwSXonZOaC8uigRLQoZE45o4rTQg31RW9VMfSDIewm0fHiR-ESb9PQF4Pn9mYweFe--CklKUa98FtDjN3YBm81neDEM9yrPKTqku8K8_fUKJeSi9tUcTvqe0cvHslBtvp3OfHozUzRCEeXY6UNLrqH1sV97ucOklD0bj1Fk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/kelas/remove?idkelas=7601",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"kelas",
+								"remove"
+							],
+							"query": [
+								{
+									"key": "idkelas",
+									"value": "7601"
+								}
+							]
+						},
+						"description": "Delete kelas"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/kelas/remove?idkelas=7601",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/kelas/remove?idkelas=7601",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"kelas",
+										"remove"
+									],
+									"query": [
+										{
+											"key": "idkelas",
+											"value": "7601"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"44-Liexibd+7iZ7Vry/tRHc7ZdhqKI\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 05:27:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": \"Record delete successful\",\n    \"Code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/jadwal/add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRpY2t5IiwiaWF0IjoxNTg3NDQ0ODAxfQ.hUw4RmGAwTk32ohkHjBLB19vq1bm0NuF_6QZbF68oTjTL9JAXdX1hAJK-480CeMJP2cM3HOmggOFEsGHTM-TrnHlBsK-RhAvO3bzgtC6eRC2yujKhXAh4GCgQRGaw0td_8hZIlQErwkvV5YS0tJWmPJiKxkDwGkTOLUC8ySGnJPQmQ9wdPe6k5fjY6A61jETeWoelJI3_yR7OS_LO_RpH491VHZXW6zZVhAeljchJM_ed6sYw0GC6ORc2IDh1jmMYAfzamBeh7LETQHkrK9eW95ZET978AJ5HmvjIPDZOfZOhetJ53j0YdSQ8fEXSwrH6vhnDsBozkE2O5jNHvYtXNqge17yj6RvPkoZUsO0sUkOIFfCs0Eszf162rjZKQxG7FaYmrPOQReWvhRk9fC6DjzY2S7taKHOsoj6A-rlHPdPFPa5CA0kpPyzinhUrE3R1XGyj0kRyJeeMYu9tj9IWCabeZaSlKFWpXNirpj6ccXEBy56u-3iLUQdrBf-KSdowBdgfwSXonZOaC8uigRLQoZE45o4rTQg31RW9VMfSDIewm0fHiR-ESb9PQF4Pn9mYweFe--CklKUa98FtDjN3YBm81neDEM9yrPKTqku8K8_fUKJeSi9tUcTvqe0cvHslBtvp3OfHozUzRCEeXY6UNLrqH1sV97ucOklD0bj1Fk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idkelas\": \"7605\",\r\n    \"idkuliah\": \"KU4096\",\r\n    \"namakuliah\": \"Pengembangan Keprofesian\",\r\n    \"hari\": \"Jumat\",\r\n    \"jammulai\": \"09.00\",\r\n    \"jamselesai\": \"11.00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/jadwal/add",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"jadwal",
+								"add"
+							]
+						},
+						"description": "Add jadwal"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/jadwal/add",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idkelas\": \"7605\",\r\n    \"idkuliah\": \"KU4096\",\r\n    \"namakuliah\": \"Pengembangan Keprofesian\",\r\n    \"hari\": \"Jumat\",\r\n    \"jammulai\": \"09.00\",\r\n    \"jamselesai\": \"11.00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/jadwal/add",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"jadwal",
+										"add"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"44-vBw36M8eJvsymk/v4Zzbw1IbRtw\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 05:30:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": \"Record insert successful\",\n    \"Code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/jadwal/edit/7605/KU4096/Jumat",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRpY2t5IiwiaWF0IjoxNTg3NDQ0ODAxfQ.hUw4RmGAwTk32ohkHjBLB19vq1bm0NuF_6QZbF68oTjTL9JAXdX1hAJK-480CeMJP2cM3HOmggOFEsGHTM-TrnHlBsK-RhAvO3bzgtC6eRC2yujKhXAh4GCgQRGaw0td_8hZIlQErwkvV5YS0tJWmPJiKxkDwGkTOLUC8ySGnJPQmQ9wdPe6k5fjY6A61jETeWoelJI3_yR7OS_LO_RpH491VHZXW6zZVhAeljchJM_ed6sYw0GC6ORc2IDh1jmMYAfzamBeh7LETQHkrK9eW95ZET978AJ5HmvjIPDZOfZOhetJ53j0YdSQ8fEXSwrH6vhnDsBozkE2O5jNHvYtXNqge17yj6RvPkoZUsO0sUkOIFfCs0Eszf162rjZKQxG7FaYmrPOQReWvhRk9fC6DjzY2S7taKHOsoj6A-rlHPdPFPa5CA0kpPyzinhUrE3R1XGyj0kRyJeeMYu9tj9IWCabeZaSlKFWpXNirpj6ccXEBy56u-3iLUQdrBf-KSdowBdgfwSXonZOaC8uigRLQoZE45o4rTQg31RW9VMfSDIewm0fHiR-ESb9PQF4Pn9mYweFe--CklKUa98FtDjN3YBm81neDEM9yrPKTqku8K8_fUKJeSi9tUcTvqe0cvHslBtvp3OfHozUzRCEeXY6UNLrqH1sV97ucOklD0bj1Fk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idkelas\": \"7605\",\r\n    \"idkuliah\": \"KU4096\",\r\n    \"namakuliah\": \"Pengembangan Keprofesian\",\r\n    \"hari\": \"Jumat\",\r\n    \"jammulai\": \"11.00\",\r\n    \"jamselesai\": \"12.00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/jadwal/edit/7605/KU4096/Jumat",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"jadwal",
+								"edit",
+								"7605",
+								"KU4096",
+								"Jumat"
+							]
+						},
+						"description": "Edit jadwal"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/jadwal/edit/:idkelas/:idkuliah/:hari",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idkelas\": \"7605\",\r\n    \"idkuliah\": \"KU4096\",\r\n    \"namakuliah\": \"Pengembangan Keprofesian\",\r\n    \"hari\": \"Jumat\",\r\n    \"jammulai\": \"11.00\",\r\n    \"jamselesai\": \"12.00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/jadwal/edit/7605/KU4096/Jumat",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"jadwal",
+										"edit",
+										"7605",
+										"KU4096",
+										"Jumat"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"44-jRG4AZZQQSYgTGkAl6UD9cgWWHY\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 05:35:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": \"Record update successful\",\n    \"Code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "/api/v1/jadwal/remove/:idkelas/:idkuliah/:hari",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRpY2t5IiwiaWF0IjoxNTg3NDQ0ODAxfQ.hUw4RmGAwTk32ohkHjBLB19vq1bm0NuF_6QZbF68oTjTL9JAXdX1hAJK-480CeMJP2cM3HOmggOFEsGHTM-TrnHlBsK-RhAvO3bzgtC6eRC2yujKhXAh4GCgQRGaw0td_8hZIlQErwkvV5YS0tJWmPJiKxkDwGkTOLUC8ySGnJPQmQ9wdPe6k5fjY6A61jETeWoelJI3_yR7OS_LO_RpH491VHZXW6zZVhAeljchJM_ed6sYw0GC6ORc2IDh1jmMYAfzamBeh7LETQHkrK9eW95ZET978AJ5HmvjIPDZOfZOhetJ53j0YdSQ8fEXSwrH6vhnDsBozkE2O5jNHvYtXNqge17yj6RvPkoZUsO0sUkOIFfCs0Eszf162rjZKQxG7FaYmrPOQReWvhRk9fC6DjzY2S7taKHOsoj6A-rlHPdPFPa5CA0kpPyzinhUrE3R1XGyj0kRyJeeMYu9tj9IWCabeZaSlKFWpXNirpj6ccXEBy56u-3iLUQdrBf-KSdowBdgfwSXonZOaC8uigRLQoZE45o4rTQg31RW9VMfSDIewm0fHiR-ESb9PQF4Pn9mYweFe--CklKUa98FtDjN3YBm81neDEM9yrPKTqku8K8_fUKJeSi9tUcTvqe0cvHslBtvp3OfHozUzRCEeXY6UNLrqH1sV97ucOklD0bj1Fk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/jadwal/remove/7602/II4096/Selasa",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"jadwal",
+								"remove",
+								"7602",
+								"II4096",
+								"Selasa"
+							]
+						},
+						"description": "Remove jadwal"
+					},
+					"response": [
+						{
+							"name": "/api/v1/jadwal/remove/:idkelas/:idkuliah/:hari",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/jadwal/remove/7602/II4096/Selasa",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"jadwal",
+										"remove",
+										"7602",
+										"II4096",
+										"Selasa"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"44-Liexibd+7iZ7Vry/tRHc7ZdhqKI\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 05:39:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": \"Record delete successful\",\n    \"Code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/jadwal/list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRpY2t5IiwiaWF0IjoxNTg3NDQ0ODAxfQ.hUw4RmGAwTk32ohkHjBLB19vq1bm0NuF_6QZbF68oTjTL9JAXdX1hAJK-480CeMJP2cM3HOmggOFEsGHTM-TrnHlBsK-RhAvO3bzgtC6eRC2yujKhXAh4GCgQRGaw0td_8hZIlQErwkvV5YS0tJWmPJiKxkDwGkTOLUC8ySGnJPQmQ9wdPe6k5fjY6A61jETeWoelJI3_yR7OS_LO_RpH491VHZXW6zZVhAeljchJM_ed6sYw0GC6ORc2IDh1jmMYAfzamBeh7LETQHkrK9eW95ZET978AJ5HmvjIPDZOfZOhetJ53j0YdSQ8fEXSwrH6vhnDsBozkE2O5jNHvYtXNqge17yj6RvPkoZUsO0sUkOIFfCs0Eszf162rjZKQxG7FaYmrPOQReWvhRk9fC6DjzY2S7taKHOsoj6A-rlHPdPFPa5CA0kpPyzinhUrE3R1XGyj0kRyJeeMYu9tj9IWCabeZaSlKFWpXNirpj6ccXEBy56u-3iLUQdrBf-KSdowBdgfwSXonZOaC8uigRLQoZE45o4rTQg31RW9VMfSDIewm0fHiR-ESb9PQF4Pn9mYweFe--CklKUa98FtDjN3YBm81neDEM9yrPKTqku8K8_fUKJeSi9tUcTvqe0cvHslBtvp3OfHozUzRCEeXY6UNLrqH1sV97ucOklD0bj1Fk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/jadwal/list",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"jadwal",
+								"list"
+							]
+						},
+						"description": "Get jadwal"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/jadwal/list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/jadwal/list",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"jadwal",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "444"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bc-Tfr7Cik9xJw0p5rt3V9siaE0Iyw\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 05:38:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": [\n        {\n            \"idkelas\": \"7604\",\n            \"idkuliah\": \"II4031\",\n            \"namakuliah\": \"Kriptografi dan Koding\",\n            \"hari\": \"Jumat\",\n            \"jammulai\": \"09.00\",\n            \"jamselesai\": \"11.00\"\n        },\n        {\n            \"idkelas\": \"7602\",\n            \"idkuliah\": \"II4096\",\n            \"namakuliah\": \"Teknologi Komputasi Awan\",\n            \"hari\": \"Selasa\",\n            \"jammulai\": \"10.00\",\n            \"jamselesai\": \"11.00\"\n        },\n        {\n            \"idkelas\": \"7605\",\n            \"idkuliah\": \"KU4096\",\n            \"namakuliah\": \"Pengembangan Keprofesian\",\n            \"hari\": \"Jumat\",\n            \"jammulai\": \"11.00\",\n            \"jamselesai\": \"12.00\"\n        }\n    ],\n    \"Code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/jadwal/list?idkelas=7605",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRpY2t5IiwiaWF0IjoxNTg3NDQ0ODAxfQ.hUw4RmGAwTk32ohkHjBLB19vq1bm0NuF_6QZbF68oTjTL9JAXdX1hAJK-480CeMJP2cM3HOmggOFEsGHTM-TrnHlBsK-RhAvO3bzgtC6eRC2yujKhXAh4GCgQRGaw0td_8hZIlQErwkvV5YS0tJWmPJiKxkDwGkTOLUC8ySGnJPQmQ9wdPe6k5fjY6A61jETeWoelJI3_yR7OS_LO_RpH491VHZXW6zZVhAeljchJM_ed6sYw0GC6ORc2IDh1jmMYAfzamBeh7LETQHkrK9eW95ZET978AJ5HmvjIPDZOfZOhetJ53j0YdSQ8fEXSwrH6vhnDsBozkE2O5jNHvYtXNqge17yj6RvPkoZUsO0sUkOIFfCs0Eszf162rjZKQxG7FaYmrPOQReWvhRk9fC6DjzY2S7taKHOsoj6A-rlHPdPFPa5CA0kpPyzinhUrE3R1XGyj0kRyJeeMYu9tj9IWCabeZaSlKFWpXNirpj6ccXEBy56u-3iLUQdrBf-KSdowBdgfwSXonZOaC8uigRLQoZE45o4rTQg31RW9VMfSDIewm0fHiR-ESb9PQF4Pn9mYweFe--CklKUa98FtDjN3YBm81neDEM9yrPKTqku8K8_fUKJeSi9tUcTvqe0cvHslBtvp3OfHozUzRCEeXY6UNLrqH1sV97ucOklD0bj1Fk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/jadwal/list?idkelas=7605",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"jadwal",
+								"list"
+							],
+							"query": [
+								{
+									"key": "idkelas",
+									"value": "7605"
+								}
+							]
+						},
+						"description": "Get one jadwal"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/jadwal/list?idkelas=7605",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/jadwal/list?idkelas=7605",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"jadwal",
+										"list"
+									],
+									"query": [
+										{
+											"key": "idkelas",
+											"value": "7605"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "177"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b1-h2EN1IQQus2V9QqQsnjwjKZkfSE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 05:40:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": [\n        {\n            \"idkelas\": \"7605\",\n            \"idkuliah\": \"KU4096\",\n            \"namakuliah\": \"Pengembangan Keprofesian\",\n            \"hari\": \"Jumat\",\n            \"jammulai\": \"11.00\",\n            \"jamselesai\": \"12.00\"\n        }\n    ],\n    \"Code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/kelas/petalampu/:idkelas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRpY2t5IiwiaWF0IjoxNTg3NDQ0ODAxfQ.hUw4RmGAwTk32ohkHjBLB19vq1bm0NuF_6QZbF68oTjTL9JAXdX1hAJK-480CeMJP2cM3HOmggOFEsGHTM-TrnHlBsK-RhAvO3bzgtC6eRC2yujKhXAh4GCgQRGaw0td_8hZIlQErwkvV5YS0tJWmPJiKxkDwGkTOLUC8ySGnJPQmQ9wdPe6k5fjY6A61jETeWoelJI3_yR7OS_LO_RpH491VHZXW6zZVhAeljchJM_ed6sYw0GC6ORc2IDh1jmMYAfzamBeh7LETQHkrK9eW95ZET978AJ5HmvjIPDZOfZOhetJ53j0YdSQ8fEXSwrH6vhnDsBozkE2O5jNHvYtXNqge17yj6RvPkoZUsO0sUkOIFfCs0Eszf162rjZKQxG7FaYmrPOQReWvhRk9fC6DjzY2S7taKHOsoj6A-rlHPdPFPa5CA0kpPyzinhUrE3R1XGyj0kRyJeeMYu9tj9IWCabeZaSlKFWpXNirpj6ccXEBy56u-3iLUQdrBf-KSdowBdgfwSXonZOaC8uigRLQoZE45o4rTQg31RW9VMfSDIewm0fHiR-ESb9PQF4Pn9mYweFe--CklKUa98FtDjN3YBm81neDEM9yrPKTqku8K8_fUKJeSi9tUcTvqe0cvHslBtvp3OfHozUzRCEeXY6UNLrqH1sV97ucOklD0bj1Fk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/kelas/petalampu/7602",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"kelas",
+								"petalampu",
+								"7602"
+							]
+						},
+						"description": "Generate Lampu"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/kelas/petalampu/:idkelas",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/kelas/petalampu/7602",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"kelas",
+										"petalampu",
+										"7602"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "100"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"64-dgT/+occSEdBcZrP+A/ntBzOotg\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 05:46:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": [\n        \"ON\",\n        \"ON\",\n        \"ON\",\n        \"OFF\",\n        \"OFF\",\n        \"OFF\",\n        \"OFF\",\n        \"OFF\",\n        \"OFF\",\n        \"OFF\"\n    ],\n    \"Code\": 200\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Mahasiswa (No Token)",
+			"item": [
+				{
+					"name": "http://52.76.55.94:3000/api/v1/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"wealth\",\n\t\"password\": \"wealth\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/register",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"register"
+							]
+						},
+						"description": "Register"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"wealth\",\n\t\"password\": \"wealth\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/register",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"register"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/kelas/counter/7605/increase",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/kelas/counter/7605/increase",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"kelas",
+								"counter",
+								"7605",
+								"increase"
+							]
+						},
+						"description": "Increase counter"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/kelas/counter/7605/increase",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/kelas/counter/7605/increase",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"kelas",
+										"counter",
+										"7605",
+										"increase"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"44-jRG4AZZQQSYgTGkAl6UD9cgWWHY\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 05:44:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": \"Record update successful\",\n    \"Code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/kelas/counter/7605/show",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/kelas/counter/7605/show",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"kelas",
+								"counter",
+								"7605",
+								"show"
+							]
+						},
+						"description": "Show counter"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/kelas/counter/7605/show",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/kelas/counter/7605/show",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"kelas",
+										"counter",
+										"7605",
+										"show"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4c-UdHlgWq0V5y6ko3hVDbP/B4fi/o\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 05:44:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": {\n        \"idkelas\": \"7605\",\n        \"peoplecount\": 1\n    },\n    \"Code\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/kelas/counter/7605/decrease",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/kelas/counter/7605/decrease",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"kelas",
+								"counter",
+								"7605",
+								"decrease"
+							]
+						},
+						"description": "Decrease counter"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/kelas/counter/7605/decrease",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/kelas/counter/7605/decrease",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"kelas",
+										"counter",
+										"7605",
+										"decrease"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3f-hKJ8MBVty0hwCnQ+V7lNzYk0Vmw\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 05:44:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Failed\",\n    \"Code\": 500,\n    \"Message\": \"Counter is already 0\"\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Sarpras (Token) Error Cases",
+			"item": [
+				{
+					"name": "http://52.76.55.94:3000/api/v1/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"kuizo\",\n\t\"password\": \"wealth\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/login",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						},
+						"description": "Login"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"kuizo\",\n\t\"password\": \"wealth\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/login",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"login"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3d-PIvQ5XNmlExy8CRfLybyGkbM2uE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 05:55:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Failed\",\n    \"Message\": \"Username not found\",\n    \"Code\": 401\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"dicky\",\n\t\"password\": \"wealth\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/login",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						},
+						"description": "Login"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"dicky\",\n\t\"password\": \"wealth\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/login",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"login"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "57"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"39-dK9T9SfcklXzFkIJgK9SIbbl8G0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 05:55:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Failed\",\n    \"Message\": \"Wrong password\",\n    \"Code\": 401\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/gedung/list?idgedung=Labtek+XII",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRpY2t5IiwiaWF0IjoxNTg3NDQ0ODAxfQ.hUw4RmGAwTk32ohkHjBLB19vq1bm0NuF_6QZbF68oTjTL9JAXdX1hAJK-480CeMJP2cM3HOmggOFEsGHTM-TrnHlBsK-RhAvO3bzgtC6eRC2yujKhXAh4GCgQRGaw0td_8hZIlQErwkvV5YS0tJWmPJiKxkDwGkTOLUC8ySGnJPQmQ9wdPe6k5fjY6A61jETeWoelJI3_yR7OS_LO_RpH491VHZXW6zZVhAeljchJM_ed6sYw0GC6ORc2IDh1jmMYAfzamBeh7LETQHkrK9eW95ZET978AJ5HmvjIPDZOfZOhetJ53j0YdSQ8fEXSwrH6vhnDsBozkE2O5jNHvYtXNqge17yj6RvPkoZUsO0sUkOIFfCs0Eszf162rjZKQxG7FaYmrPOQReWvhRk9fC6DjzY2S7taKHOsoj6A-rlHPdPFPa5CA0kpPyzinhUrE3R1XGyj0kRyJeeMYu9tj9IWCabeZaSlKFWpXNirpj6ccXEBy56u-3iLUQdrBf-KSdowBdgfwSXonZOaC8uigRLQoZE45o4rTQg31RW9VMfSDIewm0fHiR-ESb9PQF4Pn9mYweFe--CklKUa98FtDjN3YBm81neDEM9yrPKTqku8K8_fUKJeSi9tUcTvqe0cvHslBtvp3OfHozUzRCEeXY6UNLrqH1sV97ucOklD0bj1Fk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/gedung/list?idgedung=Labtek+XII",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"gedung",
+								"list"
+							],
+							"query": [
+								{
+									"key": "idgedung",
+									"value": "Labtek+XII"
+								}
+							]
+						},
+						"description": "Get List Gedung"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/gedung/list?idgedung=Labtek+XII",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/gedung/list?idgedung=Labtek+XII",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"gedung",
+										"list"
+									],
+									"query": [
+										{
+											"key": "idgedung",
+											"value": "Labtek+XII"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"37-IRk+9AWGDEkWy6v8Zqu7EuaEELU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 05:57:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Failed\",\n    \"Message\": \"Record empty\",\n    \"Code\": 500\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/gedung/list?idgedung=Labtek+XII",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/gedung/list?idgedung=Labtek+XII",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"gedung",
+								"list"
+							],
+							"query": [
+								{
+									"key": "idgedung",
+									"value": "Labtek+XII"
+								}
+							]
+						},
+						"description": "Get List Gedung"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/gedung/list?idgedung=Labtek+XII Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/gedung/list?idgedung=Labtek+XII",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"gedung",
+										"list"
+									],
+									"query": [
+										{
+											"key": "idgedung",
+											"value": "Labtek+XII"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "57"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"39-lAkHqDVxrTSvWwm4ydFgX23GoqE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 07:30:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Failed\",\n    \"Code\": 403,\n    \"Message\": \"No auth header\"\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/gedung/list?idgedung=Labtek+XII",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "dyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRpY2t5IiwiaWF0IjoxNTg3NDQ0ODAxfQ.hUw4RmGAwTk32ohkHjBLB19vq1bm0NuF_6QZbF68oTjTL9JAXdX1hAJK-480CeMJP2cM3HOmggOFEsGHTM-TrnHlBsK-RhAvO3bzgtC6eRC2yujKhXAh4GCgQRGaw0td_8hZIlQErwkvV5YS0tJWmPJiKxkDwGkTOLUC8ySGnJPQmQ9wdPe6k5fjY6A61jETeWoelJI3_yR7OS_LO_RpH491VHZXW6zZVhAeljchJM_ed6sYw0GC6ORc2IDh1jmMYAfzamBeh7LETQHkrK9eW95ZET978AJ5HmvjIPDZOfZOhetJ53j0YdSQ8fEXSwrH6vhnDsBozkE2O5jNHvYtXNqge17yj6RvPkoZUsO0sUkOIFfCs0Eszf162rjZKQxG7FaYmrPOQReWvhRk9fC6DjzY2S7taKHOsoj6A-rlHPdPFPa5CA0kpPyzinhUrE3R1XGyj0kRyJeeMYu9tj9IWCabeZaSlKFWpXNirpj6ccXEBy56u-3iLUQdrBf-KSdowBdgfwSXonZOaC8uigRLQoZE45o4rTQg31RW9VMfSDIewm0fHiR-ESb9PQF4Pn9mYweFe--CklKUa98FtDjN3YBm81neDEM9yrPKTqku8K8_fUKJeSi9tUcTvqe0cvHslBtvp3OfHozUzRCEeXY6UNLrqH1sV97ucOklD0bj1Fk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/gedung/list?idgedung=Labtek+XII",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"gedung",
+								"list"
+							],
+							"query": [
+								{
+									"key": "idgedung",
+									"value": "Labtek+XII"
+								}
+							]
+						},
+						"description": "Get List Gedung"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/gedung/list?idgedung=Labtek+XII Copy Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/gedung/list?idgedung=Labtek+XII",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"gedung",
+										"list"
+									],
+									"query": [
+										{
+											"key": "idgedung",
+											"value": "Labtek+XII"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"38-LSKsi6GgoPCKowUbdlgoIGLdz68\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 07:30:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Failed\",\n    \"Code\": 401,\n    \"Message\": \"Invalid token\"\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/kelas/add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRpY2t5IiwiaWF0IjoxNTg3NDQ0ODAxfQ.hUw4RmGAwTk32ohkHjBLB19vq1bm0NuF_6QZbF68oTjTL9JAXdX1hAJK-480CeMJP2cM3HOmggOFEsGHTM-TrnHlBsK-RhAvO3bzgtC6eRC2yujKhXAh4GCgQRGaw0td_8hZIlQErwkvV5YS0tJWmPJiKxkDwGkTOLUC8ySGnJPQmQ9wdPe6k5fjY6A61jETeWoelJI3_yR7OS_LO_RpH491VHZXW6zZVhAeljchJM_ed6sYw0GC6ORc2IDh1jmMYAfzamBeh7LETQHkrK9eW95ZET978AJ5HmvjIPDZOfZOhetJ53j0YdSQ8fEXSwrH6vhnDsBozkE2O5jNHvYtXNqge17yj6RvPkoZUsO0sUkOIFfCs0Eszf162rjZKQxG7FaYmrPOQReWvhRk9fC6DjzY2S7taKHOsoj6A-rlHPdPFPa5CA0kpPyzinhUrE3R1XGyj0kRyJeeMYu9tj9IWCabeZaSlKFWpXNirpj6ccXEBy56u-3iLUQdrBf-KSdowBdgfwSXonZOaC8uigRLQoZE45o4rTQg31RW9VMfSDIewm0fHiR-ESb9PQF4Pn9mYweFe--CklKUa98FtDjN3YBm81neDEM9yrPKTqku8K8_fUKJeSi9tUcTvqe0cvHslBtvp3OfHozUzRCEeXY6UNLrqH1sV97ucOklD0bj1Fk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idkelas\": \"7610\",\r\n    \"idgedung\": \"Labtek V\",\r\n    \"lantai\": 3,\r\n    \"jumlahlampu\": 20,\r\n    \"kapasitaskelas\": 40,\r\n    \"lampumenyala\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/kelas/add",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"kelas",
+								"add"
+							]
+						},
+						"description": "Add kelas"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/kelas/add",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idkelas\": \"7610\",\r\n    \"idgedung\": \"Labtek V\",\r\n    \"lantai\": 3,\r\n    \"jumlahlampu\": 20,\r\n    \"kapasitaskelas\": 40,\r\n    \"lampumenyala\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/kelas/add",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"kelas",
+										"add"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "313"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"139-NZStICy4Pp+8W8gg2bhqyMZA6Fw\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 06:19:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Failed\",\n    \"Message\": \"Primary key already exists\",\n    \"Detail\": {\n        \"name\": \"error\",\n        \"length\": 188,\n        \"severity\": \"ERROR\",\n        \"code\": \"23505\",\n        \"detail\": \"Key (idkelas)=(7610) already exists.\",\n        \"schema\": \"public\",\n        \"table\": \"kelas\",\n        \"constraint\": \"kelas_pkey\",\n        \"file\": \"nbtinsert.c\",\n        \"line\": \"534\",\n        \"routine\": \"_bt_check_unique\"\n    },\n    \"Code\": 500\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/kelas/add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRpY2t5IiwiaWF0IjoxNTg3NDQ0ODAxfQ.hUw4RmGAwTk32ohkHjBLB19vq1bm0NuF_6QZbF68oTjTL9JAXdX1hAJK-480CeMJP2cM3HOmggOFEsGHTM-TrnHlBsK-RhAvO3bzgtC6eRC2yujKhXAh4GCgQRGaw0td_8hZIlQErwkvV5YS0tJWmPJiKxkDwGkTOLUC8ySGnJPQmQ9wdPe6k5fjY6A61jETeWoelJI3_yR7OS_LO_RpH491VHZXW6zZVhAeljchJM_ed6sYw0GC6ORc2IDh1jmMYAfzamBeh7LETQHkrK9eW95ZET978AJ5HmvjIPDZOfZOhetJ53j0YdSQ8fEXSwrH6vhnDsBozkE2O5jNHvYtXNqge17yj6RvPkoZUsO0sUkOIFfCs0Eszf162rjZKQxG7FaYmrPOQReWvhRk9fC6DjzY2S7taKHOsoj6A-rlHPdPFPa5CA0kpPyzinhUrE3R1XGyj0kRyJeeMYu9tj9IWCabeZaSlKFWpXNirpj6ccXEBy56u-3iLUQdrBf-KSdowBdgfwSXonZOaC8uigRLQoZE45o4rTQg31RW9VMfSDIewm0fHiR-ESb9PQF4Pn9mYweFe--CklKUa98FtDjN3YBm81neDEM9yrPKTqku8K8_fUKJeSi9tUcTvqe0cvHslBtvp3OfHozUzRCEeXY6UNLrqH1sV97ucOklD0bj1Fk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idkelas\": \"7605\",\r\n    \"idgedung\": \"Labtek XIII\",\r\n    \"lantai\": 3,\r\n    \"jumlahlampu\": 20,\r\n    \"kapasitaskelas\": 40,\r\n    \"lampumenyala\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/kelas/add",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"kelas",
+								"add"
+							]
+						},
+						"description": "Add kelas"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/kelas/add",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idkelas\": \"7605\",\r\n    \"idgedung\": \"Labtek XIII\",\r\n    \"lantai\": 3,\r\n    \"jumlahlampu\": 20,\r\n    \"kapasitaskelas\": 40,\r\n    \"lampumenyala\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/kelas/add",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"kelas",
+										"add"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"41-l7BUSjxIy12zv2k6EeC4OqX+0MM\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 06:21:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Failed\",\n    \"Message\": \"Gedung tidak terdaftar\",\n    \"Code\": 400\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/kelas/edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRpY2t5IiwiaWF0IjoxNTg3NDQ0ODAxfQ.hUw4RmGAwTk32ohkHjBLB19vq1bm0NuF_6QZbF68oTjTL9JAXdX1hAJK-480CeMJP2cM3HOmggOFEsGHTM-TrnHlBsK-RhAvO3bzgtC6eRC2yujKhXAh4GCgQRGaw0td_8hZIlQErwkvV5YS0tJWmPJiKxkDwGkTOLUC8ySGnJPQmQ9wdPe6k5fjY6A61jETeWoelJI3_yR7OS_LO_RpH491VHZXW6zZVhAeljchJM_ed6sYw0GC6ORc2IDh1jmMYAfzamBeh7LETQHkrK9eW95ZET978AJ5HmvjIPDZOfZOhetJ53j0YdSQ8fEXSwrH6vhnDsBozkE2O5jNHvYtXNqge17yj6RvPkoZUsO0sUkOIFfCs0Eszf162rjZKQxG7FaYmrPOQReWvhRk9fC6DjzY2S7taKHOsoj6A-rlHPdPFPa5CA0kpPyzinhUrE3R1XGyj0kRyJeeMYu9tj9IWCabeZaSlKFWpXNirpj6ccXEBy56u-3iLUQdrBf-KSdowBdgfwSXonZOaC8uigRLQoZE45o4rTQg31RW9VMfSDIewm0fHiR-ESb9PQF4Pn9mYweFe--CklKUa98FtDjN3YBm81neDEM9yrPKTqku8K8_fUKJeSi9tUcTvqe0cvHslBtvp3OfHozUzRCEeXY6UNLrqH1sV97ucOklD0bj1Fk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idkelas\": \"7610\",\r\n    \"idgedung\": \"Labtek V\",\r\n    \"lantai\": 9,\r\n    \"jumlahlampu\": 20,\r\n    \"kapasitaskelas\": 100,\r\n    \"lampumenyala\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/kelas/edit",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"kelas",
+								"edit"
+							]
+						},
+						"description": "Update kelas"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/kelas/edit",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idkelas\": \"7610\",\r\n    \"idgedung\": \"Labtek V\",\r\n    \"lantai\": 9,\r\n    \"jumlahlampu\": 20,\r\n    \"kapasitaskelas\": 100,\r\n    \"lampumenyala\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/kelas/edit",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"kelas",
+										"edit"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "73"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"49-dxvF5pHtRJ7KMcVrl8AmeEIrNhM\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 06:22:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Failed\",\n    \"Message\": \"Lantai tidak valid, maksimum 4\",\n    \"Code\": 400\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/kelas/list?idkelas=9605",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRpY2t5IiwiaWF0IjoxNTg3NDQ0ODAxfQ.hUw4RmGAwTk32ohkHjBLB19vq1bm0NuF_6QZbF68oTjTL9JAXdX1hAJK-480CeMJP2cM3HOmggOFEsGHTM-TrnHlBsK-RhAvO3bzgtC6eRC2yujKhXAh4GCgQRGaw0td_8hZIlQErwkvV5YS0tJWmPJiKxkDwGkTOLUC8ySGnJPQmQ9wdPe6k5fjY6A61jETeWoelJI3_yR7OS_LO_RpH491VHZXW6zZVhAeljchJM_ed6sYw0GC6ORc2IDh1jmMYAfzamBeh7LETQHkrK9eW95ZET978AJ5HmvjIPDZOfZOhetJ53j0YdSQ8fEXSwrH6vhnDsBozkE2O5jNHvYtXNqge17yj6RvPkoZUsO0sUkOIFfCs0Eszf162rjZKQxG7FaYmrPOQReWvhRk9fC6DjzY2S7taKHOsoj6A-rlHPdPFPa5CA0kpPyzinhUrE3R1XGyj0kRyJeeMYu9tj9IWCabeZaSlKFWpXNirpj6ccXEBy56u-3iLUQdrBf-KSdowBdgfwSXonZOaC8uigRLQoZE45o4rTQg31RW9VMfSDIewm0fHiR-ESb9PQF4Pn9mYweFe--CklKUa98FtDjN3YBm81neDEM9yrPKTqku8K8_fUKJeSi9tUcTvqe0cvHslBtvp3OfHozUzRCEeXY6UNLrqH1sV97ucOklD0bj1Fk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/kelas/list?idkelas=7605",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"kelas",
+								"list"
+							],
+							"query": [
+								{
+									"key": "idkelas",
+									"value": "7605"
+								}
+							]
+						},
+						"description": "Get kelas 7605"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/kelas/list?idkelas=9605",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/kelas/list?idkelas=9605",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"kelas",
+										"list"
+									],
+									"query": [
+										{
+											"key": "idkelas",
+											"value": "9605"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"37-IRk+9AWGDEkWy6v8Zqu7EuaEELU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 06:23:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Failed\",\n    \"Message\": \"Record empty\",\n    \"Code\": 500\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/jadwal/add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRpY2t5IiwiaWF0IjoxNTg3NDQ0ODAxfQ.hUw4RmGAwTk32ohkHjBLB19vq1bm0NuF_6QZbF68oTjTL9JAXdX1hAJK-480CeMJP2cM3HOmggOFEsGHTM-TrnHlBsK-RhAvO3bzgtC6eRC2yujKhXAh4GCgQRGaw0td_8hZIlQErwkvV5YS0tJWmPJiKxkDwGkTOLUC8ySGnJPQmQ9wdPe6k5fjY6A61jETeWoelJI3_yR7OS_LO_RpH491VHZXW6zZVhAeljchJM_ed6sYw0GC6ORc2IDh1jmMYAfzamBeh7LETQHkrK9eW95ZET978AJ5HmvjIPDZOfZOhetJ53j0YdSQ8fEXSwrH6vhnDsBozkE2O5jNHvYtXNqge17yj6RvPkoZUsO0sUkOIFfCs0Eszf162rjZKQxG7FaYmrPOQReWvhRk9fC6DjzY2S7taKHOsoj6A-rlHPdPFPa5CA0kpPyzinhUrE3R1XGyj0kRyJeeMYu9tj9IWCabeZaSlKFWpXNirpj6ccXEBy56u-3iLUQdrBf-KSdowBdgfwSXonZOaC8uigRLQoZE45o4rTQg31RW9VMfSDIewm0fHiR-ESb9PQF4Pn9mYweFe--CklKUa98FtDjN3YBm81neDEM9yrPKTqku8K8_fUKJeSi9tUcTvqe0cvHslBtvp3OfHozUzRCEeXY6UNLrqH1sV97ucOklD0bj1Fk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idkelas\": \"9605\",\r\n    \"idkuliah\": \"KU4096\",\r\n    \"namakuliah\": \"Pengembangan Keprofesian\",\r\n    \"hari\": \"Jumat\",\r\n    \"jammulai\": \"09.00\",\r\n    \"jamselesai\": \"11.00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/jadwal/add",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"jadwal",
+								"add"
+							]
+						},
+						"description": "Add jadwal"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/jadwal/add",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idkelas\": \"9605\",\r\n    \"idkuliah\": \"KU4096\",\r\n    \"namakuliah\": \"Pengembangan Keprofesian\",\r\n    \"hari\": \"Jumat\",\r\n    \"jammulai\": \"09.00\",\r\n    \"jamselesai\": \"11.00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/jadwal/add",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"jadwal",
+										"add"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "342"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"156-tUPQ1n/+SfduEqBxgZm1MlCGiHU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 06:26:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Failed\",\n    \"Message\": \"Kelas belum terdaftar\",\n    \"Detail\": {\n        \"name\": \"error\",\n        \"length\": 249,\n        \"severity\": \"ERROR\",\n        \"code\": \"23503\",\n        \"detail\": \"Key (idkelas)=(9605) is not present in table \\\"kelas\\\".\",\n        \"schema\": \"public\",\n        \"table\": \"jadwal\",\n        \"constraint\": \"jadwal_idkelas_fkey\",\n        \"file\": \"ri_triggers.c\",\n        \"line\": \"2783\",\n        \"routine\": \"ri_ReportViolation\"\n    },\n    \"Code\": 500\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/jadwal/list?idkelas=7605",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRpY2t5IiwiaWF0IjoxNTg3NDQ0ODAxfQ.hUw4RmGAwTk32ohkHjBLB19vq1bm0NuF_6QZbF68oTjTL9JAXdX1hAJK-480CeMJP2cM3HOmggOFEsGHTM-TrnHlBsK-RhAvO3bzgtC6eRC2yujKhXAh4GCgQRGaw0td_8hZIlQErwkvV5YS0tJWmPJiKxkDwGkTOLUC8ySGnJPQmQ9wdPe6k5fjY6A61jETeWoelJI3_yR7OS_LO_RpH491VHZXW6zZVhAeljchJM_ed6sYw0GC6ORc2IDh1jmMYAfzamBeh7LETQHkrK9eW95ZET978AJ5HmvjIPDZOfZOhetJ53j0YdSQ8fEXSwrH6vhnDsBozkE2O5jNHvYtXNqge17yj6RvPkoZUsO0sUkOIFfCs0Eszf162rjZKQxG7FaYmrPOQReWvhRk9fC6DjzY2S7taKHOsoj6A-rlHPdPFPa5CA0kpPyzinhUrE3R1XGyj0kRyJeeMYu9tj9IWCabeZaSlKFWpXNirpj6ccXEBy56u-3iLUQdrBf-KSdowBdgfwSXonZOaC8uigRLQoZE45o4rTQg31RW9VMfSDIewm0fHiR-ESb9PQF4Pn9mYweFe--CklKUa98FtDjN3YBm81neDEM9yrPKTqku8K8_fUKJeSi9tUcTvqe0cvHslBtvp3OfHozUzRCEeXY6UNLrqH1sV97ucOklD0bj1Fk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/jadwal/list?idkelas=9605",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"jadwal",
+								"list"
+							],
+							"query": [
+								{
+									"key": "idkelas",
+									"value": "9605"
+								}
+							]
+						},
+						"description": "Get one jadwal"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/jadwal/list?idkelas=7605",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/jadwal/list?idkelas=9605",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"jadwal",
+										"list"
+									],
+									"query": [
+										{
+											"key": "idkelas",
+											"value": "9605"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"37-IRk+9AWGDEkWy6v8Zqu7EuaEELU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 06:26:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Failed\",\n    \"Message\": \"Record empty\",\n    \"Code\": 500\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/kelas/petalampu/9602",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRpY2t5IiwiaWF0IjoxNTg3NDQ0ODAxfQ.hUw4RmGAwTk32ohkHjBLB19vq1bm0NuF_6QZbF68oTjTL9JAXdX1hAJK-480CeMJP2cM3HOmggOFEsGHTM-TrnHlBsK-RhAvO3bzgtC6eRC2yujKhXAh4GCgQRGaw0td_8hZIlQErwkvV5YS0tJWmPJiKxkDwGkTOLUC8ySGnJPQmQ9wdPe6k5fjY6A61jETeWoelJI3_yR7OS_LO_RpH491VHZXW6zZVhAeljchJM_ed6sYw0GC6ORc2IDh1jmMYAfzamBeh7LETQHkrK9eW95ZET978AJ5HmvjIPDZOfZOhetJ53j0YdSQ8fEXSwrH6vhnDsBozkE2O5jNHvYtXNqge17yj6RvPkoZUsO0sUkOIFfCs0Eszf162rjZKQxG7FaYmrPOQReWvhRk9fC6DjzY2S7taKHOsoj6A-rlHPdPFPa5CA0kpPyzinhUrE3R1XGyj0kRyJeeMYu9tj9IWCabeZaSlKFWpXNirpj6ccXEBy56u-3iLUQdrBf-KSdowBdgfwSXonZOaC8uigRLQoZE45o4rTQg31RW9VMfSDIewm0fHiR-ESb9PQF4Pn9mYweFe--CklKUa98FtDjN3YBm81neDEM9yrPKTqku8K8_fUKJeSi9tUcTvqe0cvHslBtvp3OfHozUzRCEeXY6UNLrqH1sV97ucOklD0bj1Fk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/kelas/petalampu/9602",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"kelas",
+								"petalampu",
+								"9602"
+							]
+						},
+						"description": "Generate Lampu"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/kelas/petalampu/:idkelas",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/kelas/petalampu/9602",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"kelas",
+										"petalampu",
+										"9602"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"37-IRk+9AWGDEkWy6v8Zqu7EuaEELU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 06:27:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Failed\",\n    \"Message\": \"Record empty\",\n    \"Code\": 500\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "fdf0190e-af7d-43fa-9f79-3f83a7c4670a",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "f76d690d-8348-4403-b65c-27413c2fd715",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Mahasiswa (No Token) Error Cases",
+			"item": [
+				{
+					"name": "http://52.76.55.94:3000/api/v1/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"wealth\",\n\t\"password\": \"wealth\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/register",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"register"
+							]
+						},
+						"description": "Register"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"dicky\",\n\t\"password\": \"wealth\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/register",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"register"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "321"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"141-Fu6lCBEQolD7DJNkEWdLcqMjcIM\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 06:28:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Failed\",\n    \"Message\": \"Primary key already exists\",\n    \"Detail\": {\n        \"name\": \"error\",\n        \"length\": 199,\n        \"severity\": \"ERROR\",\n        \"code\": \"23505\",\n        \"detail\": \"Key (username)=(dicky) already exists.\",\n        \"schema\": \"public\",\n        \"table\": \"pengguna\",\n        \"constraint\": \"pengguna_pkey\",\n        \"file\": \"nbtinsert.c\",\n        \"line\": \"534\",\n        \"routine\": \"_bt_check_unique\"\n    },\n    \"Code\": 500\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/kelas/counter/9605/increase",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/kelas/counter/9605/increase",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"kelas",
+								"counter",
+								"9605",
+								"increase"
+							]
+						},
+						"description": "Increase counter"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/kelas/counter/9605/increase",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/kelas/counter/9605/increase",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"kelas",
+										"counter",
+										"9605",
+										"increase"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"37-IRk+9AWGDEkWy6v8Zqu7EuaEELU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 06:28:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Failed\",\n    \"Message\": \"Record empty\",\n    \"Code\": 500\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/kelas/counter/9605/show",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/kelas/counter/9605/show",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"kelas",
+								"counter",
+								"9605",
+								"show"
+							]
+						},
+						"description": "Show counter"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/kelas/counter/9605/show",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/kelas/counter/9605/show",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"kelas",
+										"counter",
+										"9605",
+										"show"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"37-IRk+9AWGDEkWy6v8Zqu7EuaEELU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 06:28:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Failed\",\n    \"Message\": \"Record empty\",\n    \"Code\": 500\n}"
+						}
+					]
+				},
+				{
+					"name": "http://52.76.55.94:3000/api/v1/kelas/counter/9605/decrease",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://52.76.55.94:3000/api/v1/kelas/counter/9605/decrease",
+							"protocol": "http",
+							"host": [
+								"52",
+								"76",
+								"55",
+								"94"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"kelas",
+								"counter",
+								"9605",
+								"decrease"
+							]
+						},
+						"description": "Decrease counter"
+					},
+					"response": [
+						{
+							"name": "http://52.76.55.94:3000/api/v1/kelas/counter/9605/decrease",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://52.76.55.94:3000/api/v1/kelas/counter/9605/decrease",
+									"protocol": "http",
+									"host": [
+										"52",
+										"76",
+										"55",
+										"94"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"kelas",
+										"counter",
+										"9605",
+										"decrease"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"37-IRk+9AWGDEkWy6v8Zqu7EuaEELU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Apr 2020 06:29:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": \"Failed\",\n    \"Message\": \"Record empty\",\n    \"Code\": 500\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "e882c52e-d722-4a11-bea4-71d49d5dd08a",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "ac8aed1a-fa01-4a64-bc10-f57ff64eac20",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"protocolProfileBehavior": {}
+}
