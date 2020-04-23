@@ -5,7 +5,7 @@
 
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-  <title>Entrance</title>
+  <title>Masuk Kelas</title>
 
   <script src="script/entrance.js"></script>
 
@@ -50,9 +50,9 @@
       min-height: 100px
     }
 
-	.navbar-default {
-	 margin : 0 !important; 
-	}
+  .navbar-default {
+   margin : 0 !important; 
+  }
 
     .navbar.navbar-fixed-bottom,
     .navbar.navbar-fixed-top {
@@ -94,28 +94,42 @@
     }
 
     .navbar-brand{
-    	color: white;
-    	font-size: 25px;
+      color: white;
+      font-size: 25px;
     }
     td .label {
       cursor: pointer;
     }
 
     h2 { 
-	    border-bottom: 1px solid black 
-	}
+      border-bottom: 1px solid black 
+  }
 
-	.table thead>tr>th {
-   		vertical-align: bottom;
-	   	border-bottom: 0px solid hsl(0, 0%, 87%);
-	}
+  .table thead>tr>th {
+      vertical-align: bottom;
+      border-bottom: 0px solid hsl(0, 0%, 87%);
+  }
 
-	.center {
-	  display: block;
-	  margin-left: auto;
-	  margin-right: auto;
-	  width: 50%;
-	}
+  .tTambahKelas{
+    border-collapse: collapse;
+    margin: 3% 0%;
+    min-width: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  }
+
+  .tTambahKelas th,
+  .tPTambahKelas td{
+    padding: 12px 15px
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
   </style>
 </head>
 
@@ -141,7 +155,7 @@
 
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse navbar-ex2-collapse">
-                <ul class="nav navbar-nav">	
+                <ul class="nav navbar-nav"> 
                     </ul>
                   </li>
                 </ul>
@@ -152,34 +166,18 @@
           </div>
     </div>
     <!-- Navs done -->
-
-    <div class="row" style="background-color:#D0CEE2">
-        <div class="col-sm-6">
-        	<br><br><br><br>
-          <a class="btn btn-success btn-lg " onclick="increaseCounter()" href="#">Masuk</a>
-          </div>
-          <div class="col-sm-6">
-          <br><br><br><br>
-          <a class="btn btn-danger btn-lg" onclick="decreaseCounter()" href="#">Keluar</a>
-        </div>
-    </div>
     <div class="row" style="background-color:#D0CEE2">  
+    <h2>Masuk Kelas</h2>
         <div class="col-sm-6">
           <table class="tTambahKelas">
       <tr>
-        <th>Counter</th>    
-        <th><input name="tunjukCounter" type="text" id="tunjukCounter"></th></tr>
-     <div class="row" style="background-color:#D0CEE2">
-     <div class="col-sm-6">
-     <a class="label label-info pull left" onclick="showCounter()" href="#">Show current counter</a>
-     </div>
-    <div class="col-sm-6">
-     <table>
-     <tr>
-      <th id="tunjukCounter" href="#"></th>
-     </tr>
-     </table>
-     </div>
+        <th>Masukkan kelas yang diinginkan</th>    
+        <th><input name="idKelas" type="text" id="idKelas"></th></tr>
+      </tr>
+    </table><br>
+    <a class="btn btn-success btn-lg" onclick="masukKelas()" href="#">Masuk</a>
+          </div>
+    </div>
   <!-- Main Scripts-->
   <script src="assets/js/jquery.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
@@ -187,9 +185,7 @@
   <!-- Bootstrap 3 has typeahead optionally -->
   <script src="assets/js/typeahead.min.js"></script>
   <script>
-    window.onload = enterKelas();
   </script>
-
 </body>
 
 </html>
