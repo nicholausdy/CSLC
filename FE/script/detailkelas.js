@@ -113,6 +113,8 @@ const getJadwalById = async () => {
   let data = await result.json();
   console.log(data);
   let item = data.Message[0];
+  window.localStorage.setItem('idCourse',item.idkuliah);
+  window.localStorage.setItem('days',item.hari);
   console.log(item.idkuliah);
 
   let idKuliahElem = document.getElementById('edit-idKuliah');
@@ -128,20 +130,18 @@ const getJadwalById = async () => {
   jamSelesaiElem.value = item.jamselesai;
 };
 
-const updateJadwal = async (idClasses,idKuliah,hari) => {
+const updateJadwal = async () => {
   let idKuliahElem = document.getElementById('edit-idKuliah');
   let namaKuliahElem = document.getElementById('edit-namaKuliah');
   let hariElem = document.getElementById('edit-hari');
   let jamMulaiElem = document.getElementById('edit-jamMulai');
   let jamSelesaiElem = document.getElementById('edit-jamSelesai');
 
-  let id = window.localStorage.getItem('idClasses');
+  let id = window.localStorage.getItem('idClass');
   console.log(id);
-  window.localStorage.setItem('idMatkul',idKuliah);
-  window.localStorage.setItem('hariMatkul',hari);
-   let id_kuliah = window.localStorage.getItem('idMatkul');
-   let hari_kuliah = window.localStorage.getItem('hariMatkul');
-  let result = await fetch(`http://52.76.55.94:3000/api/v1/jadwal/edit/${id}/${idMatkul}/${hariMatkul}`, {
+   let id_kuliah = window.localStorage.getItem('idCourse');
+   let hari_kuliah = window.localStorage.getItem('days');
+  let result = await fetch(`http://52.76.55.94:3000/api/v1/jadwal/edit/${id}/${id_kuliah}/${hari_kuliah}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
@@ -158,6 +158,6 @@ const updateJadwal = async (idClasses,idKuliah,hari) => {
   });
   let resp = await result.json();
   console.log(resp);
-  let urlPart = window.location.href.split('/');
-  window.location = urlPart.splice(0, urlPart.length-1).join('/') + '/detailkelas.html';
+  //let urlPart = window.location.href.split('/');
+  //window.location = urlPart.splice(0, urlPart.length-1).join('/') + '/detailkelas.html';
 };
