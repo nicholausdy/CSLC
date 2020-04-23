@@ -161,3 +161,93 @@ const updateJadwal = async () => {
   let urlPart = window.location.href.split('/');
   window.location = urlPart.splice(0, urlPart.length-1).join('/') + '/detailkelas.html';
 };
+
+
+async function getPetaLampuJson(){
+  const idkelas = window.localStorage.getItem('idClass')
+  const result = await fetch(`http://52.76.55.94:3000/api/v1/kelas/petalampu/${idkelas}`,{
+      method: 'GET', // *GET, POST, PUT, DELETE, etc.
+      mode: 'cors', // no-cors, *cors, same-origin
+      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+      headers: ({
+          'Content-Type': 'application/json',
+          'authorization': window.localStorage.getItem('token'),
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+   }),
+   })
+  const data = await result.json()
+  console.log(data)
+  return data
+}
+
+async function generatePetaMati(){
+  const dataRaw = await getPetaLampuJson();
+  if (dataRaw.Status == 'Success'){
+    let ctx = document.getElementById('canvas').getContext('2d');
+    const img = new Image();
+    //const img_nyala = new Image();
+    //img_mati.src = '../gambar/lampumati.png';
+    //img_nyala.src = '../gambar/lampumenyala.png';
+    const data_arr = dataRaw.Message; 
+    console.log(data_arr)
+    let count_lampu_nyala = 0;
+    let count_lampu_mati = 0;
+    for (let l = 0 ; l < data_arr.length; l++ ){
+      if (data_arr[l] == 'ON'){
+        count_lampu_nyala++
+      }
+      else {
+        count_lampu_mati++
+      }
+    }
+    console.log(count_lampu_mati)
+    //img.src = './gambar/lampumenyala.png'
+    img.onload = function(){
+      for (let i = 0; i < 1; i++) {
+        for (let j = 0; j < count_lampu_mati; j++  ){
+          ctx.drawImage(img, j*20,i*20, 20, 20);
+        }
+      }
+    };
+    img.src = './gambar/lampumati.png'
+  }
+  else {
+    alert(dataRaw.Message)
+  }
+}
+
+async function generatePetaNyala(){
+  const dataRaw = await getPetaLampuJson();
+  if (dataRaw.Status == 'Success'){
+    let ctx = document.getElementById('canvas_').getContext('2d');
+    const img = new Image();
+    //const img_nyala = new Image();
+    //img_mati.src = '../gambar/lampumati.png';
+    //img_nyala.src = '../gambar/lampumenyala.png';
+    const data_arr = dataRaw.Message; 
+    console.log(data_arr)
+    let count_lampu_nyala = 0;
+    let count_lampu_mati = 0;
+    for (let l = 0 ; l < data_arr.length; l++ ){
+      if (data_arr[l] == 'ON'){
+        count_lampu_nyala++
+      }
+      else {
+        count_lampu_mati++
+      }
+    }
+    console.log(count_lampu_nyala)
+    //img.src = './gambar/lampumenyala.png'
+    img.onload = function(){
+      for (let i = 0; i < 1; i++) {
+        for (let j = 0; j < count_lampu_nyala; j++  ){
+          ctx.drawImage(img, j*20,i*20, 20, 20);
+        }
+      }
+    };
+    img.src = './gambar/lampumenyala.png'
+  }
+  else {
+    alert(dataRaw.Message)
+  }
+}
