@@ -45,7 +45,7 @@ const createRowDetails = (i,idKuliah, mataKuliah,hari,jamMulai,jamSelesai) => {
 
 const getClassDetailsById = async () => {
 	let id_kelas = localStorage.getItem('idClass');
-    let result = await fetch(`http://52.76.55.94:3000/api/v1/jadwal/list?idkelas=${id_kelas}`,{
+    let result = await fetch(`https://52.76.55.94:3000/api/v1/jadwal/list?idkelas=${id_kelas}`,{
   	method: 'GET', // *GET, POST, PUT, DELETE, etc.
      mode: 'cors', // no-cors, *cors, same-origin
      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -75,7 +75,7 @@ const hapusJadwal = async (idKelas,idKuliah,hari) => {
    let hari_kuliah = window.localStorage.getItem('hariMatkul');
    console.log(id_kuliah);
    console.log(hari_kuliah);	
-   let result = await fetch(`http://52.76.55.94:3000/api/v1/jadwal/remove/${id}/${id_kuliah}/${hari_kuliah}`, {
+   let result = await fetch(`https://52.76.55.94:3000/api/v1/jadwal/remove/${id}/${id_kuliah}/${hari_kuliah}`, {
     method: 'DELETE',
     mode: 'cors', // no-cors, *cors, same-origin
     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -99,7 +99,7 @@ const getUpdateJadwal = async () => {
 const getJadwalById = async () => {
   let idKelas = window.localStorage.getItem('idClass');
   console.log(idKelas);
-  let result = await fetch(`http://52.76.55.94:3000/api/v1/jadwal/list?idkelas=${idKelas}`,{
+  let result = await fetch(`https://52.76.55.94:3000/api/v1/jadwal/list?idkelas=${idKelas}`,{
   method: 'GET', // *GET, POST, PUT, DELETE, etc.
      mode: 'cors', // no-cors, *cors, same-origin
      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -140,7 +140,7 @@ const updateJadwal = async () => {
   console.log(id);
    let id_kuliah = window.localStorage.getItem('idCourse');
    let hari_kuliah = window.localStorage.getItem('days');
-  let result = await fetch(`http://52.76.55.94:3000/api/v1/jadwal/edit/${id}/${id_kuliah}/${hari_kuliah}`, {
+  let result = await fetch(`https://52.76.55.94:3000/api/v1/jadwal/edit/${id}/${id_kuliah}/${hari_kuliah}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
@@ -164,7 +164,7 @@ const updateJadwal = async () => {
 
 async function getPetaLampuJson(){
   const idkelas = window.localStorage.getItem('idClass')
-  const result = await fetch(`http://52.76.55.94:3000/api/v1/kelas/petalampu/${idkelas}`,{
+  const result = await fetch(`https://52.76.55.94:3000/api/v1/kelas/petalampu/${idkelas}`,{
       method: 'GET', // *GET, POST, PUT, DELETE, etc.
       mode: 'cors', // no-cors, *cors, same-origin
       cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached

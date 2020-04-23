@@ -12,7 +12,7 @@ const postJadwal = async () => {
     let jamSelesaiElem = document.getElementById('jamSelesai');
 
 
-    let hasil = await fetch(`http://52.76.55.94:3000/api/v1/jadwal/add`,{
+    let hasil = await fetch(`https://52.76.55.94:3000/api/v1/jadwal/add`,{
       method: 'POST',
       mode: 'cors',
       cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
