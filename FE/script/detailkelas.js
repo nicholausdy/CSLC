@@ -158,6 +158,6 @@ const updateJadwal = async () => {
   });
   let resp = await result.json();
   console.log(resp);
-  //let urlPart = window.location.href.split('/');
-  //window.location = urlPart.splice(0, urlPart.length-1).join('/') + '/detailkelas.html';
+  let urlPart = window.location.href.split('/');
+  window.location = urlPart.splice(0, urlPart.length-1).join('/') + '/detailkelas.html';
 };
