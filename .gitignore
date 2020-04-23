@@ -2,3 +2,5 @@
 node_modules/
 /handler/jwtRS256.key
 /handler/jwtRS256.key.pub
+server.key
+server.cert

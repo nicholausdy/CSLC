@@ -35,14 +35,14 @@ const updateJadwal = async () => {
   let hariElem = document.getElementById('edit-hari');
   let jamMulaiElem = document.getElementById('edit-jamMulai');
   let jamSelesaiElem = document.getElementById('edit-jamSelesai');
-
+  console.log(idKuliahElem)
   let id = window.localStorage.getItem('idClass');
   console.log(id);
   window.localStorage.setItem('idMatkul',idKuliah);
   window.localStorage.setItem('hariMatkul',hari);
    let id_kuliah = window.localStorage.getItem('idMatkul');
    let hari_kuliah = window.localStorage.getItem('hariMatkul');
-  let result = await fetch(`http://52.76.55.94:3000/api/v1/jadwal/edit/${id}/${idMatkul}/${hariMatkul}`, {
+  let result = await fetch(`http://52.76.55.94:3000/api/v1/jadwal/edit/${id}/${id_kuliah}/${hari_kuliah}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
