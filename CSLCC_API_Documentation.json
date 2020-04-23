@@ -1684,7 +1684,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"username\": \"wealth\",\n\t\"password\": \"wealth\"\n}",
+									"raw": "{\n\t\"username\": \"wealthan\",\n\t\"password\": \"wealthan\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1708,10 +1708,41 @@
 									]
 								}
 							},
-							"_postman_previewlanguage": null,
-							"header": null,
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"44-vBw36M8eJvsymk/v4Zzbw1IbRtw\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Apr 2020 05:03:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
 							"cookie": [],
-							"body": null
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": \"Record insert successful\",\n    \"Code\": 200\n}"
 						}
 					]
 				},
@@ -1811,7 +1842,7 @@
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 21 Apr 2020 05:44:56 GMT"
+									"value": "Thu, 23 Apr 2020 05:02:41 GMT"
 								},
 								{
 									"key": "Connection",
@@ -1897,11 +1928,11 @@
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"4c-UdHlgWq0V5y6ko3hVDbP/B4fi/o\""
+									"value": "W/\"4c-9zSNodx3mifl/GGHm+5bKzd3vqI\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 21 Apr 2020 05:44:59 GMT"
+									"value": "Thu, 23 Apr 2020 05:03:16 GMT"
 								},
 								{
 									"key": "Connection",
@@ -1909,7 +1940,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": {\n        \"idkelas\": \"7605\",\n        \"peoplecount\": 1\n    },\n    \"Code\": 200\n}"
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": {\n        \"idkelas\": \"7605\",\n        \"peoplecount\": 2\n    },\n    \"Code\": 200\n}"
 						}
 					]
 				},
@@ -1965,8 +1996,8 @@
 									]
 								}
 							},
-							"status": "Internal Server Error",
-							"code": 500,
+							"status": "OK",
+							"code": 200,
 							"_postman_previewlanguage": "json",
 							"header": [
 								{
@@ -1983,15 +2014,15 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "63"
+									"value": "68"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"3f-hKJ8MBVty0hwCnQ+V7lNzYk0Vmw\""
+									"value": "W/\"44-jRG4AZZQQSYgTGkAl6UD9cgWWHY\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 21 Apr 2020 05:44:47 GMT"
+									"value": "Thu, 23 Apr 2020 05:03:29 GMT"
 								},
 								{
 									"key": "Connection",
@@ -1999,7 +2030,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"Status\": \"Failed\",\n    \"Code\": 500,\n    \"Message\": \"Counter is already 0\"\n}"
+							"body": "{\n    \"Status\": \"Success\",\n    \"Message\": \"Record update successful\",\n    \"Code\": 200\n}"
 						}
 					]
 				}
