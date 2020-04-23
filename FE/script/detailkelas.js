@@ -21,12 +21,14 @@ const createRowDetails = (i,idKuliah, mataKuliah,hari,jamMulai,jamSelesai) => {
 	jamSelesaiCell.innerText = jamSelesai;
 
 	let editCell = document.createElement('td');
-	editCell.innerHTML = `<span class="label label-info pull-left" >edit</span>`
+	editCell.innerHTML = `<span class="label label-info pull-left">edit</span>`
 
 	let deleteCell = document.createElement('td');
 	deleteCell.innerHTML = `<span class="label label-danger pull-left">hapus</span>`
 
 	deleteCell.addEventListener('click', () => hapusJadwal(id,idKuliah,hari));
+	editCell.addEventListener('click', () => getUpdateJadwal());
+	
 	
 	let row = document.createElement('tr');
 	row.appendChild(numCell);
@@ -66,34 +68,6 @@ const getClassDetailsById = async () => {
 	}
 };
 
-const updateJadwal = async () => {
-  let kapasitasKelasElem = document.getElementById('edit-kapasitasKelas');
-  let jumlahLampuElem = document.getElementById('edit-jumlahLampu');
-  let gedungElem = document.getElementById('edit-gedung');
-  let lantaiElem = document.getElementById('edit-lantai');
-
-  let id = window.localStorage.getItem('idClass');
-  console.log(id);
-  let result = await fetch(`http://52.76.55.94:3000/api/v1/kelas/edit`, {
-    method: 'PUT',
-    headers: {
-      'Content-Type': 'application/json',
-      'authorization': window.localStorage.getItem('token'),
-    },
-    body: JSON.stringify({
-	   "idkelas": id,
-      "kapasitaskelas": parseInt(kapasitasKelasElem.value), 
-      "jumlahlampu": parseInt(jumlahLampuElem.value), 
-      "idgedung": gedungElem.value, 
-      "lantai": parseInt(lantaiElem.value),
-    }),
-  });
-  let resp = await result.json();
-  console.log(resp);
-  let urlPart = window.location.href.split('/');
-  window.location = urlPart.splice(0, urlPart.length-1).join('/') + '/detailkelas.html';
-};
-
 const hapusJadwal = async (idKelas,idKuliah,hari) => {
 	let id = window.localStorage.getItem('idClass');
    window.localStorage.setItem('idMatkul',idKuliah);
@@ -112,6 +86,76 @@ const hapusJadwal = async (idKelas,idKuliah,hari) => {
        // 'Content-Type': 'application/x-www-form-urlencoded',
      })
   })
+  let resp = await result.json();
+  console.log(resp);
+  let urlPart = window.location.href.split('/');
+  window.location = urlPart.splice(0, urlPart.length-1).join('/') + '/detailkelas.html';
+};
+
+const getUpdateJadwal = async () => {
+  let urlPart1 = window.location.href.split('/');
+  window.location = urlPart1.splice(0, urlPart1.length-1).join('/') + '/editjadwal.html';
+}
+
+const getJadwalById = async () => {
+  let idKelas = window.localStorage.getItem('idClass');
+  console.log(idKelas);
+  let result = await fetch(`http://52.76.55.94:3000/api/v1/jadwal/list?idkelas=${idKelas}`,{
+  method: 'GET', // *GET, POST, PUT, DELETE, etc.
+     mode: 'cors', // no-cors, *cors, same-origin
+     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+     headers: ({
+       'Content-Type': 'application/json',
+       'authorization': window.localStorage.getItem('token'),
+       // 'Content-Type': 'application/x-www-form-urlencoded',
+     }),
+     })
+  let data = await result.json();
+  console.log(data);
+  let item = data.Message[0];
+  console.log(item.idkuliah);
+
+  let idKuliahElem = document.getElementById('edit-idKuliah');
+  let namaKuliahElem = document.getElementById('edit-namaKuliah');
+  let hariElem = document.getElementById('edit-hari');
+  let jamMulaiElem = document.getElementById('edit-jamMulai');
+  let jamSelesaiElem = document.getElementById('edit-jamSelesai');
+  
+  idKuliahElem.value = item.idkuliah;
+  namaKuliahElem.value = item.namakuliah;
+  hariElem.value = item.hari;
+  jamMulaiElem.value = item.jammulai;
+  jamSelesaiElem.value = item.jamselesai;
+};
+
+const updateJadwal = async (idClasses,idKuliah,hari) => {
+  let idKuliahElem = document.getElementById('edit-idKuliah');
+  let namaKuliahElem = document.getElementById('edit-namaKuliah');
+  let hariElem = document.getElementById('edit-hari');
+  let jamMulaiElem = document.getElementById('edit-jamMulai');
+  let jamSelesaiElem = document.getElementById('edit-jamSelesai');
+
+  let id = window.localStorage.getItem('idClasses');
+  console.log(id);
+  window.localStorage.setItem('idMatkul',idKuliah);
+  window.localStorage.setItem('hariMatkul',hari);
+   let id_kuliah = window.localStorage.getItem('idMatkul');
+   let hari_kuliah = window.localStorage.getItem('hariMatkul');
+  let result = await fetch(`http://52.76.55.94:3000/api/v1/jadwal/edit/${id}/${idMatkul}/${hariMatkul}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+      'authorization': window.localStorage.getItem('token'),
+    },
+    body: JSON.stringify({
+      "idkelas":id,
+	  "idkuliah": idKuliahElem.value,
+      "namakuliah": namaKuliahElem.value, 
+      "hari": hariElem.value, 
+      "jammulai": jamMulaiElem.value, 
+      "jamselesai": jamSelesaiElem.value,
+    }),
+  });
   let resp = await result.json();
   console.log(resp);
   let urlPart = window.location.href.split('/');
