@@ -8,8 +8,8 @@ const kelasHandler = require('./handler/kelas.js');
 const jadwalHandler = require('./handler/jadwal.js');
 const sensorHandler = require('./handler/sensor.js');
 const serverErrorHandler = require('./errorHandler/server.js');
-const https = require('https');
-const fs = require('fs');
+//const https = require('https');
+//const fs = require('fs');
 //app setting
 app.use(cors());
 app.use(bodyParser.json({limit: '5mb'}));
@@ -367,9 +367,6 @@ app.get('/api/v1/kelas/petalampu/:idkelas', async (req,res) => {
 })
 
 //run server
-https.createServer({
-    key: fs.readFileSync('server.key'),
-    cert: fs.readFileSync('server.cert')
-}, app).listen(3000, () => {
+app.listen(3000, () => {
     console.log('Maid cafe serving at port 3000')
 })

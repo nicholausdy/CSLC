@@ -19,7 +19,7 @@ const postKelas = async () => {
       })
     )
   let id = idKelasElem.value;
-  let result = await fetch(`https://52.76.55.94:3000/api/v1/kelas/add`, {
+  let result = await fetch(`http://52.76.55.94:3000/api/v1/kelas/add`, {
     method: 'POST',
     mode: 'cors',
     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached

@@ -14,7 +14,7 @@ const enterKelas = async () => {
 const increaseCounter = async () => {
   let id = window.localStorage.getItem('idMasuk');
   console.log(id);
-  let result = await fetch(`https://52.76.55.94:3000/api/v1/kelas/counter/${id}/increase`, {
+  let result = await fetch(`http://52.76.55.94:3000/api/v1/kelas/counter/${id}/increase`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ const increaseCounter = async () => {
 const decreaseCounter = async () => {
   let id = window.localStorage.getItem('idMasuk');
   console.log(id);
-  let result = await fetch(`https://52.76.55.94:3000/api/v1/kelas/counter/${id}/decrease`, {
+  let result = await fetch(`http://52.76.55.94:3000/api/v1/kelas/counter/${id}/decrease`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ const decreaseCounter = async () => {
 
 const showCounter = async () => {
 	let id = window.localStorage.getItem('idMasuk');
-  let result = await fetch(`https://52.76.55.94:3000/api/v1/kelas/counter/${id}/show`, {
+  let result = await fetch(`http://52.76.55.94:3000/api/v1/kelas/counter/${id}/show`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
