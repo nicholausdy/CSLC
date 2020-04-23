@@ -20,14 +20,13 @@ const createRowDetails = (i,idKuliah, mataKuliah,hari,jamMulai,jamSelesai) => {
 	let jamSelesaiCell = document.createElement('td');
 	jamSelesaiCell.innerText = jamSelesai;
 
-	let editCell = document.createElement('td');
-	editCell.innerHTML = `<span class="label label-info pull-left">edit</span>`
+
 
 	let deleteCell = document.createElement('td');
 	deleteCell.innerHTML = `<span class="label label-danger pull-left">hapus</span>`
 
 	deleteCell.addEventListener('click', () => hapusJadwal(id,idKuliah,hari));
-	editCell.addEventListener('click', () => getUpdateJadwal());
+	
 	
 	
 	let row = document.createElement('tr');
@@ -37,7 +36,7 @@ const createRowDetails = (i,idKuliah, mataKuliah,hari,jamMulai,jamSelesai) => {
 	row.appendChild(hariCell);
 	row.appendChild(jamMulaiCell);
 	row.appendChild(jamSelesaiCell);
-	row.appendChild(editCell);
+
 	row.appendChild(deleteCell);
 
 	let table = document.getElementById('tabelDetailKelas');
