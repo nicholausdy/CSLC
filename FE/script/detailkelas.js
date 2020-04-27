@@ -20,13 +20,14 @@ const createRowDetails = (i,idKuliah, mataKuliah,hari,jamMulai,jamSelesai) => {
 	let jamSelesaiCell = document.createElement('td');
 	jamSelesaiCell.innerText = jamSelesai;
 
-
+  let editCell = document.createElement('td');
+  editCell.innerHTML = `<span class="label label-info pull-left">edit</span>`
 
 	let deleteCell = document.createElement('td');
 	deleteCell.innerHTML = `<span class="label label-danger pull-left">hapus</span>`
 
+  editCell.addEventListener('click', () => getUpdateJadwal(idKuliah,hari));
 	deleteCell.addEventListener('click', () => hapusJadwal(id,idKuliah,hari));
-	
 	
 	
 	let row = document.createElement('tr');
@@ -36,7 +37,7 @@ const createRowDetails = (i,idKuliah, mataKuliah,hari,jamMulai,jamSelesai) => {
 	row.appendChild(hariCell);
 	row.appendChild(jamMulaiCell);
 	row.appendChild(jamSelesaiCell);
-
+  row.appendChild(editCell);
 	row.appendChild(deleteCell);
 
 	let table = document.getElementById('tabelDetailKelas');
@@ -91,14 +92,17 @@ const hapusJadwal = async (idKelas,idKuliah,hari) => {
   window.location = urlPart.splice(0, urlPart.length-1).join('/') + '/detailkelas.html';
 };
 
-const getUpdateJadwal = async () => {
+const getUpdateJadwal = async (idKuliah,hari) => {
+  window.localStorage.setItem('idCourse',idKuliah);
+  window.localStorage.setItem('hariMatkul',hari);
   let urlPart1 = window.location.href.split('/');
   window.location = urlPart1.splice(0, urlPart1.length-1).join('/') + '/editjadwal.html';
 }
 
 const getJadwalById = async () => {
   let idKelas = window.localStorage.getItem('idClass');
-  console.log(idKelas);
+  let idKuliah = window.localStorage.getItem('idCourse');
+  let hari = window.localStorage.getItem('days');
   let result = await fetch(`http://52.76.55.94:3000/api/v1/jadwal/list?idkelas=${idKelas}`,{
   method: 'GET', // *GET, POST, PUT, DELETE, etc.
      mode: 'cors', // no-cors, *cors, same-origin
@@ -111,22 +115,26 @@ const getJadwalById = async () => {
      })
   let data = await result.json();
   console.log(data);
-  let item = data.Message[0];
-  window.localStorage.setItem('idCourse',item.idkuliah);
-  window.localStorage.setItem('days',item.hari);
-  console.log(item.idkuliah);
+  console.log(idKelas);
+  console.log(idKuliah);
+  console.log(hari);
+  for(let item of data.Message){
+    if(item.idkuliah == idKuliah && item.hari == hari){
+      let idKuliahElem = document.getElementById('edit-idKuliah');
+      let namaKuliahElem = document.getElementById('edit-namaKuliah');
+      let hariElem = document.getElementById('edit-hari');
+      let jamMulaiElem = document.getElementById('edit-jamMulai');
+      let jamSelesaiElem = document.getElementById('edit-jamSelesai');
+      
+      idKuliahElem.value = item.idkuliah;
+      namaKuliahElem.value = item.namakuliah;
+      hariElem.value = item.hari;
+      jamMulaiElem.value = item.jammulai;
+      jamSelesaiElem.value = item.jamselesai;
 
-  let idKuliahElem = document.getElementById('edit-idKuliah');
-  let namaKuliahElem = document.getElementById('edit-namaKuliah');
-  let hariElem = document.getElementById('edit-hari');
-  let jamMulaiElem = document.getElementById('edit-jamMulai');
-  let jamSelesaiElem = document.getElementById('edit-jamSelesai');
-  
-  idKuliahElem.value = item.idkuliah;
-  namaKuliahElem.value = item.namakuliah;
-  hariElem.value = item.hari;
-  jamMulaiElem.value = item.jammulai;
-  jamSelesaiElem.value = item.jamselesai;
+      return;
+    }
+  }
 };
 
 const updateJadwal = async () => {

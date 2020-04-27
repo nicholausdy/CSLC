@@ -9,6 +9,7 @@
 
   <script src="script/daftarkelas.js"></script>
   <script src="script/hapuskelas.js"></script>
+  <script src="script/logout.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,300,400italic,700,900' rel='stylesheet' type='text/css'>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -131,11 +132,13 @@
                     <span class="icon-bar"></span>
                   </button>
                 <a class="navbar-brand" href="#"><b>CSLC Kelas</b></a>
+                <a class="navbar-brand" href="#"><b>|</b></a>
+                <a class="navbar-brand" href="opening.html"><b>Mahasiswa</b></a>
               </div>
 
-              <!-- Collect the nav links, forms, and other content for toggling -->
+             <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse navbar-ex2-collapse">
-                <ul class="nav navbar-nav">	
+                <ul class="nav navbar-nav"> 
                     </ul>
                   </li>
                 </ul>
@@ -147,9 +150,9 @@
     </div>
     <!-- Navs done -->
 
-    <div class="row" style="background-color:#D0CEE2">
+    <div class="row" style="background-color:white">
         <div class="col-sm-12">
-          <h2>Daftar Kelas</h2>
+          <h2 display="inline-block">Daftar Kelas</h2>
             <table class="table table borderless">
               <thead>
                 <tr>
@@ -168,6 +171,7 @@
               </tbody>
             </table>
             <a class="label label-info pull-left" href='tambahkelas.html' height='100px'>Tambah Kelas</a>
+            <button type="buttonformmhs" style="position: absolute; right: 0;" id="logout" onclick="logout()">Logout</button>
         </div>
     </div>
   <!-- Main Scripts-->
@@ -179,7 +183,6 @@
   <script>
     window.onload = loadData();
   </script>
-
 </body>
 
 </html>
