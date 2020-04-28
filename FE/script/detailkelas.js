@@ -57,14 +57,16 @@ const getClassDetailsById = async () => {
      })
  	})
   let data = await result.json();
-  let item = data.Message;
-  window.localStorage.setItem('namaMatkul',item)
 	console.log(data);
+  let tes = data.Message[0];
   let i = 1;
-  for (let item of data.Message) {
-  	console.log(item.idkelas);
-  	createRowDetails(i, item.idkuliah, item.namakuliah, item.hari, item.jammulai, item.jamselesai);
-  	i++;
+  console.log(tes.idkelas)
+  if(typeof tes.idkelas !== 'undefined' ){
+    for (let item of data.Message) {
+    	console.log(item.idkelas);
+    	createRowDetails(i, item.idkuliah, item.namakuliah, item.hari, item.jammulai, item.jamselesai);
+    	i++;
+    }
   }
 };
 
@@ -89,7 +91,7 @@ const hapusJadwal = async (idKelas,idKuliah,hari) => {
   let resp = await result.json();
   console.log(resp);
   let urlPart = window.location.href.split('/');
-  window.location = urlPart.splice(0, urlPart.length-1).join('/') + '/daftarkelas.html';
+  window.location = urlPart.splice(0, urlPart.length-1).join('/') + '/detailkelas.html';
 };
 
 const getUpdateJadwal = async (idKuliah,hari) => {
