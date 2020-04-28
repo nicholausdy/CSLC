@@ -82,13 +82,8 @@ const seeDetails = async (idKelas) => {
  	});
   let data = await result.json();
   console.log(data);
-  if(data.Message == "Record empty"){
-  	alert('Belum ada jadwal yang dimasukkan');
-  }
-  else{
-	  let urlPart1 = window.location.href.split('/');
-	  window.location = urlPart1.splice(0, urlPart1.length-1).join('/') + '/detailkelas.html';
-  }
+  let urlPart1 = window.location.href.split('/');
+  window.location = urlPart1.splice(0, urlPart1.length-1).join('/') + '/detailkelas.html';
 }
 
 const getUpdate = async (idKelas) => {
