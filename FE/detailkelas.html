@@ -150,7 +150,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                <a class="navbar-brand" href="#"><b>CSLC 7602</b></a>
+                <a class="navbar-brand" href="#" id="isiKelas"></a>
               </div>
 
               <!-- Collect the nav links, forms, and other content for toggling -->
@@ -168,7 +168,7 @@
     <!-- Navs done -->
     <div class="row" style="background-color:white">	
         <div class="col-sm-6">
-    		<h2 style="font-weight:bold">Jadwal Kelas</h2>
+    		<h2 style="font-weight:bold">Jadwal Kelas </h2>
          	<table class="table table borderless">
               <thead>
                 <tr>
@@ -201,6 +201,7 @@
   <script src="assets/js/typeahead.min.js"></script>
   <script>
     window.onload = getClassDetailsById();
+    window.onload = isiIdKelas();
     window.onload = generatePetaMati();
     window.onload = generatePetaNyala();
   </script>

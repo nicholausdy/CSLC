@@ -169,6 +169,11 @@ const updateJadwal = async () => {
   window.location = urlPart.splice(0, urlPart.length-1).join('/') + '/detailkelas.html';
 };
 
+const isiIdKelas = async () => {
+  let idKelas = window.localStorage.getItem('idClass');
+  let idKelasElem = document.getElementById('isiKelas');
+  idKelasElem.innerText = "CSLC "+idKelas;
+};
 
 async function getPetaLampuJson(){
   const idkelas = window.localStorage.getItem('idClass')
