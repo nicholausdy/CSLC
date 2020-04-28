@@ -56,16 +56,16 @@ const getClassDetailsById = async () => {
        // 'Content-Type': 'application/x-www-form-urlencoded',
      })
  	})
-    let data = await result.json();
-    let item = data.Message;
-    window.localStorage.setItem('namaMatkul',item)
+  let data = await result.json();
+  let item = data.Message;
+  window.localStorage.setItem('namaMatkul',item)
 	console.log(data);
-	let i = 1;
-	for (let item of data.Message) {
-		console.log(item.idkelas);
-		createRowDetails(i, item.idkuliah, item.namakuliah, item.hari, item.jammulai, item.jamselesai);
-		i++;
-	}
+  let i = 1;
+  for (let item of data.Message) {
+  	console.log(item.idkelas);
+  	createRowDetails(i, item.idkuliah, item.namakuliah, item.hari, item.jammulai, item.jamselesai);
+  	i++;
+  }
 };
 
 const hapusJadwal = async (idKelas,idKuliah,hari) => {
