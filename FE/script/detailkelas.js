@@ -61,7 +61,7 @@ const getClassDetailsById = async () => {
   let tes = data.Message[0];
   let i = 1;
   console.log(tes.idkelas)
-  if(typeof tes.idkelas !== 'undefined' ){
+  if((typeof tes.idkelas !== 'undefined' )&&(tes.idkuliah != '')){
     for (let item of data.Message) {
     	console.log(item.idkelas);
     	createRowDetails(i, item.idkuliah, item.namakuliah, item.hari, item.jammulai, item.jamselesai);
