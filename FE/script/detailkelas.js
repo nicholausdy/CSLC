@@ -59,15 +59,22 @@ const getClassDetailsById = async () => {
   let data = await result.json();
 	console.log(data);
   let tes = data.Message[0];
+  let item = data.Message;
+  console.log(tes.idkuliah);
   let i = 1;
   console.log(tes.idkelas)
-  if((typeof tes.idkelas !== 'undefined' )&&(tes.idkuliah != '')){
+  if((typeof tes.idkelas !== 'undefined') &&(tes.idkuliah !="")){
     for (let item of data.Message) {
     	console.log(item.idkelas);
     	createRowDetails(i, item.idkuliah, item.namakuliah, item.hari, item.jammulai, item.jamselesai);
-    	i++;
+      i++;
     }
   }
+  if(tes.idkuliah === ""){
+    for(let i=1;i<item.length;i++){
+      createRowDetails(i, item[i].idkuliah, item[i].namakuliah, item[i].hari, item[i].jammulai, item[i].jamselesai);
+    }
+  };
 };
 
 const hapusJadwal = async (idKelas,idKuliah,hari) => {
@@ -76,8 +83,6 @@ const hapusJadwal = async (idKelas,idKuliah,hari) => {
    window.localStorage.setItem('hariMatkul',hari);
    let id_kuliah = window.localStorage.getItem('idMatkul');
    let hari_kuliah = window.localStorage.getItem('hariMatkul');
-   console.log(id_kuliah);
-   console.log(hari_kuliah);	
    let result = await fetch(`http://52.76.55.94:3000/api/v1/jadwal/remove/${id}/${id_kuliah}/${hari_kuliah}`, {
     method: 'DELETE',
     mode: 'cors', // no-cors, *cors, same-origin
