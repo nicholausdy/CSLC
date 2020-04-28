@@ -38,6 +38,11 @@ const postKelas = async () => {
     let res = await result.json();
     console.log(res);
     console.log(id);
+    if(res.Message == "Gedung tidak terdaftar"){
+      alert('Gedung tidak terdaftar, coba ulangi lagi');
+      let urlPart1 = window.location.href.split('/');
+      window.location = urlPart1.splice(0, urlPart1.length-1).join('/') + '/tambahkelas.html';
+    }
 
     let idKuliahElem = document.getElementById('idKuliah');
     let namaKuliahElem = document.getElementById('namaKuliah');

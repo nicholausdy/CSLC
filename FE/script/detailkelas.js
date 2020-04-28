@@ -89,7 +89,7 @@ const hapusJadwal = async (idKelas,idKuliah,hari) => {
   let resp = await result.json();
   console.log(resp);
   let urlPart = window.location.href.split('/');
-  window.location = urlPart.splice(0, urlPart.length-1).join('/') + '/detailkelas.html';
+  window.location = urlPart.splice(0, urlPart.length-1).join('/') + '/daftarkelas.html';
 };
 
 const getUpdateJadwal = async (idKuliah,hari) => {
@@ -102,7 +102,7 @@ const getUpdateJadwal = async (idKuliah,hari) => {
 const getJadwalById = async () => {
   let idKelas = window.localStorage.getItem('idClass');
   let idKuliah = window.localStorage.getItem('idCourse');
-  let hari = window.localStorage.getItem('days');
+  let hari = window.localStorage.getItem('hariMatkul');
   let result = await fetch(`http://52.76.55.94:3000/api/v1/jadwal/list?idkelas=${idKelas}`,{
   method: 'GET', // *GET, POST, PUT, DELETE, etc.
      mode: 'cors', // no-cors, *cors, same-origin
@@ -147,7 +147,7 @@ const updateJadwal = async () => {
   let id = window.localStorage.getItem('idClass');
   console.log(id);
    let id_kuliah = window.localStorage.getItem('idCourse');
-   let hari_kuliah = window.localStorage.getItem('days');
+   let hari_kuliah = window.localStorage.getItem('hariMatkul');
   let result = await fetch(`http://52.76.55.94:3000/api/v1/jadwal/edit/${id}/${id_kuliah}/${hari_kuliah}`, {
     method: 'PUT',
     headers: {
@@ -166,7 +166,7 @@ const updateJadwal = async () => {
   let resp = await result.json();
   console.log(resp);
   let urlPart = window.location.href.split('/');
-  window.location = urlPart.splice(0, urlPart.length-1).join('/') + '/detailkelas.html';
+  window.location = urlPart.splice(0, urlPart.length-1).join('/') + '/daftarkelas.html';
 };
 
 const isiIdKelas = async () => {
