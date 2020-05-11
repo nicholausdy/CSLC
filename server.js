@@ -8,6 +8,7 @@ const kelasHandler = require('./handler/kelas.js');
 const jadwalHandler = require('./handler/jadwal.js');
 const sensorHandler = require('./handler/sensor.js');
 const statisticHandler = require('./handler/statistic.js');
+const predictionHandler = require('./handler/prediction.js');
 const serverErrorHandler = require('./errorHandler/server.js');
 //const https = require('https');
 //const fs = require('fs');
@@ -376,6 +377,100 @@ app.get('/api/v1/kelas/petalampu/:idkelas', async (req,res) => {
         res.json(errorResult)
     } 
 })
+// /api/v1/statistic -> get all ; /api/v1/statistic?idgedung=Labtek+V -> get one
+app.get('/api/v1/statistic', async (req,res) => { 
+    try {
+        if (typeof req.query.idgedung === 'undefined'){
+            const listResult = await statisticHandler.detailStatisticAll();
+            res.status(listResult.Code)
+            res.json(listResult)
+        }
+        else {
+            const singleResult = await statisticHandler.detailStatisticByIdGedung(req.query.idgedung)
+            res.status(singleResult.Code)
+            res.json(singleResult)
+        }
+
+    }
+    catch (e) {
+        const errorResult = await serverErrorHandler.serverError(e)
+        res.status(errorResult.Code)
+        res.json(errorResult)
+    }
+})
+
+app.post('/api/v1/prediction/add', async (req,res) => {
+    try {
+        const verifyUser = await penggunaHandler.verifyRequest(req)
+        console.log(verifyUser)
+        if (verifyUser.Status == 'Success'){
+            const addResult = await predictionHandler.addPrediction(req.body.idgedung,req.body.biaya_today,req.body.biaya_week, req.body.biaya_year, req.body.jumlah_lampu_avg)
+            res.status(addResult.Code)
+            res.json(addResult)
+        }
+        else {
+            res.status(verifyUser.Code)
+            res.json(verifyUser)
+        }
+    }
+    catch (e) {
+        const errorResult = await serverErrorHandler.serverError(e)
+        res.status(errorResult.Code)
+        res.json(errorResult)
+    } 
+})
+
+app.put('/api/v1/prediction/edit', async (req,res) => {
+    try {
+        const verifyUser = await penggunaHandler.verifyRequest(req)
+        console.log(verifyUser)
+        if (verifyUser.Status == 'Success'){
+            const editResult = await predictionHandler.editPrediction(req.body.idgedung,req.body.biaya_today, req.body.biaya_week, req.body.biaya_year, req.body.jumlah_lampu_avg)
+            res.status(editResult.Code)
+            res.json(editResult)
+            
+        }
+        else {
+            res.status(verifyUser.Code)
+            res.json(verifyUser)
+        }
+    }
+    catch (e) {
+        const errorResult = await serverErrorHandler.serverError(e)
+        res.status(errorResult.Code)
+        res.json(errorResult)
+    } 
+})
+// /api/v1/prediction -> get all ; /api/v1/prediction?idgedung=Labtek+V -> get one
+app.get('/api/v1/prediction', async (req,res) => {
+    try {
+        const verifyUser = await penggunaHandler.verifyRequest(req)
+        console.log(verifyUser) 
+        if (verifyUser.Status == 'Success'){
+            //check query string on URL
+            if (typeof req.query.idgedung === 'undefined'){
+                const showAllResult = await predictionHandler.listPrediction();
+                res.status(showAllResult.Code)
+                res.json(showAllResult)
+            }
+            else {
+                const showResult = await predictionHandler.detailPrediction(req.query.idgedung)
+                res.status(showResult.Code)
+                res.json(showResult)
+            }
+        }
+        else {
+            res.status(verifyUser.Code)
+            res.json(verifyUser) 
+        }
+    }
+    catch (e) {
+        const errorResult = await serverErrorHandler.serverError(e)
+        res.status(errorResult.Code)
+        res.json(errorResult)
+    }
+})
+
 
 //run server
 app.listen(3000, () => {

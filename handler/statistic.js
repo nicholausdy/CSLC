@@ -71,9 +71,30 @@ async function addStatistic(idkelas){
     return result;
 }
 
+async function detailStatisticByIdGedung(idgedung){
+    let result = await statistic.showStatisticByIdGedung(idgedung)
+    if (result.Status == 'Success'){
+        result.Code = 200
+    }
+    else {
+        result.Code = 500
+    }
+    return result
+}
 
-
+async function detailStatisticAll() {
+    let result = await statistic.showAllStatistic()
+    if (result.Status == 'Success'){
+        result.Code = 200
+    }
+    else {
+        result.Code = 500
+    }
+    return result
+}
 
 module.exports = {
-    addStatistic : addStatistic
+    addStatistic : addStatistic,
+    detailStatisticByIdGedung : detailStatisticByIdGedung,
+    detailStatisticAll : detailStatisticAll
 }

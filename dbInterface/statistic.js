@@ -34,7 +34,31 @@ async function showStatisticByIdGedung(idgedung){
         }
         else {
             result.Status = 'Success'
-            result.Message = query_result.rows[0]
+            result.Message = query_result.rows
+        }
+    }
+    catch (e) {
+        result.Status = 'Failed'
+        result.Message = await errorHandler.databaseError(e)
+        result.Detail = e
+    }
+    finally {
+        return result
+    }
+}
+
+async function showAllStatistic() {
+    let result = {};
+    try {
+        const text = 'SELECT idkelas, lampumenyala, timestamp, idgedung FROM statistic' 
+        const query_result = await dbConfig.db.query(text)
+        if (typeof query_result.rows[0] === 'undefined'){
+            result.Status = 'Failed'
+            result.Message = 'Record empty'
+        }
+        else {
+            result.Status = 'Success'
+            result.Message = query_result.rows
         }
     }
     catch (e) {
@@ -49,5 +73,6 @@ async function showStatisticByIdGedung(idgedung){
 
 module.exports = {
     insertStatistic : insertStatistic,
-    showStatisticByIdGedung: showStatisticByIdGedung
+    showStatisticByIdGedung : showStatisticByIdGedung,
+    showAllStatistic : showAllStatistic
 }
