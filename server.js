@@ -7,6 +7,7 @@ const gedungHandler = require('./handler/gedung.js');
 const kelasHandler = require('./handler/kelas.js');
 const jadwalHandler = require('./handler/jadwal.js');
 const sensorHandler = require('./handler/sensor.js');
+const statisticHandler = require('./handler/statistic.js');
 const serverErrorHandler = require('./errorHandler/server.js');
 //const https = require('https');
 //const fs = require('fs');
@@ -305,6 +306,11 @@ app.put('/api/v1/kelas/counter/:idkelas/:action', async (req,res) => {
                     res.status(modifyResult.Code)
                     res.json(modifyResult)
                 }
+                const statisticResult = await statisticHandler.addStatistic(req.params.idkelas)
+                if (statisticResult.Status == 'Failed'){
+                    statisticResult.Message = 'Failed to insert statistic'
+                    res.json(statisticResult)
+                }
             }
             else {
                 res.status(counterResult.Code)
@@ -318,6 +324,11 @@ app.put('/api/v1/kelas/counter/:idkelas/:action', async (req,res) => {
                 if (modifyResult.Status == 'Success'){
                     res.status(modifyResult.Code)
                     res.json(modifyResult)
+                }
+                const statisticResult = await statisticHandler.addStatistic(req.params.idkelas)
+                if (statisticResult.Status == 'Failed'){
+                    statisticResult.Message = 'Failed to insert statistic'
+                    res.json(statisticResult)
                 }
             }
             else {

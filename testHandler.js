@@ -2,6 +2,7 @@ const penggunaHandler = require('./handler/pengguna.js')
 const gedungHandler = require('./handler/gedung.js')
 const kelasHandler = require('./handler/kelas.js')
 const sensorHandler = require('./handler/sensor.js')
+const statisticHandler = require('./handler/statistic.js')
 
 async function main(){
     const user = 'william'
@@ -25,7 +26,7 @@ async function main(){
     //const res7 = await kelasHandler.validateGedung('Labtek VII',1)
     //console.log(res7)
     const idgedung = 'Labtek V'
-    const idkelas = '7603'
+    const idkelas = '7602'
     const lantai = 1
     const jumlahlampu = 10
     const kapasitaskelas = 50
@@ -39,7 +40,7 @@ async function main(){
     // }
     //const res11 = await kelasHandler.editLampuMenyala(idkelas)
     //console.log(res11)
-    const res12 = await kelasHandler.getArrayLampu(idkelas)
+    const res12 = await statisticHandler.addStatistic(idkelas)
     console.log(res12)
 }
 
