@@ -404,7 +404,7 @@ app.post('/api/v1/prediction/add', async (req,res) => {
         const verifyUser = await penggunaHandler.verifyRequest(req)
         console.log(verifyUser)
         if (verifyUser.Status == 'Success'){
-            const addResult = await predictionHandler.addPrediction(req.body.idgedung,req.body.biaya_today,req.body.biaya_week, req.body.biaya_year, req.body.jumlah_lampu_avg)
+            const addResult = await predictionHandler.addPrediction(req.body.idgedung,req.body.biaya_today,req.body.biaya_week, req.body.biaya_year, req.body.jumlah_lampu_avg, req.body.jumlah_kelas)
             res.status(addResult.Code)
             res.json(addResult)
         }
@@ -425,7 +425,7 @@ app.put('/api/v1/prediction/edit', async (req,res) => {
         const verifyUser = await penggunaHandler.verifyRequest(req)
         console.log(verifyUser)
         if (verifyUser.Status == 'Success'){
-            const editResult = await predictionHandler.editPrediction(req.body.idgedung,req.body.biaya_today, req.body.biaya_week, req.body.biaya_year, req.body.jumlah_lampu_avg)
+            const editResult = await predictionHandler.editPrediction(req.body.idgedung,req.body.biaya_today, req.body.biaya_week, req.body.biaya_year, req.body.jumlah_lampu_avg, req.body.jumlah_kelas)
             res.status(editResult.Code)
             res.json(editResult)
             

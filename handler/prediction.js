@@ -1,7 +1,7 @@
 const prediction = require('../dbInterface/prediction.js');
 
-async function addPrediction(idgedung, biaya_today, biaya_week, biaya_year, jumlah_lampu_avg){
-    let result = await prediction.insertPrediction(idgedung, biaya_today, biaya_week, biaya_year, jumlah_lampu_avg)
+async function addPrediction(idgedung, biaya_today, biaya_week, biaya_year, jumlah_lampu_avg, jumlah_kelas){
+    let result = await prediction.insertPrediction(idgedung, biaya_today, biaya_week, biaya_year, jumlah_lampu_avg, jumlah_kelas)
     if (result.Status == 'Success' ){
         result.Code = 200
     }
@@ -33,8 +33,8 @@ async function detailPrediction(idgedung){
     return result
 }
 
-async function editPrediction(idgedung, biaya_today, biaya_week, biaya_year, jumlah_lampu_avg){
-    let result = await prediction.updatePrediction(idgedung, biaya_today, biaya_week, biaya_year, jumlah_lampu_avg)
+async function editPrediction(idgedung, biaya_today, biaya_week, biaya_year, jumlah_lampu_avg, jumlah_kelas){
+    let result = await prediction.updatePrediction(idgedung, biaya_today, biaya_week, biaya_year, jumlah_lampu_avg, jumlah_kelas)
     if (result.Status == 'Success'){
         result.Code = 200
     }
